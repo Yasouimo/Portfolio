@@ -1,4 +1,4 @@
-// Initialize AOS with longer duration
+// Initialize AOS
 document.addEventListener('DOMContentLoaded', function () {
     AOS.init({
         duration: 1000,
@@ -61,78 +61,71 @@ function toggleDetails(element) {
     }
 }
 
-// Close all open card details
-function closeAllDetails() {
-    const openHeaders = document.querySelectorAll('.certification-header.active');
-    openHeaders.forEach(header => {
-        header.classList.remove('active');
-        const details = header.nextElementSibling;
-        details.style.height = '0';
-    });
+// Get current certificate index
+function getCurrentIndex() {
+    const track = document.querySelector('.certificates-track');
+    const transform = track.style.transform;
+    const translateX = transform ? parseInt(transform.match(/-?\d+/)[0]) : 0;
+    const cardWidth = document.querySelector('.certification-card').offsetWidth + 32; // Including gap
+    return Math.abs(Math.round(translateX / cardWidth));
 }
 
-// Scroll to a specific certificate by index
+// Scroll to specific certificate
 function scrollToCertificate(index) {
     const track = document.querySelector('.certificates-track');
     const cards = document.querySelectorAll('.certification-card');
     
-    closeAllDetails(); // Always close details, even if the index is invalid
+    // Close all open details
+    const allHeaders = document.querySelectorAll('.certification-header.active');
+    allHeaders.forEach(header => {
+        header.classList.remove('active');
+        const details = header.nextElementSibling;
+        details.style.height = '0';
+    });
 
     if (index >= 0 && index < cards.length) {
-        const cardWidth = cards[0].offsetWidth + 32; // Include gap
-        const scrollPosition = cardWidth * index;
-        track.scrollTo({ 
-            left: scrollPosition, 
-            behavior: 'smooth' 
-        });
+        const cardWidth = cards[0].offsetWidth + 32; // Including gap
+        const newTransformValue = -cardWidth * index; // Move by one card width
+        track.style.transition = 'transform 0.3s ease'; // Add transition for smooth scrolling
+        track.style.transform = `translateX(${newTransformValue}px)`;
     }
 }
 
-// Get the current visible card index
-function getCurrentCardIndex() {
-    const track = document.querySelector('.certificates-track');
-    const cards = document.querySelectorAll('.certification-card');
-    const cardWidth = cards[0].offsetWidth + 32; // Include gap
-    const currentScroll = track.scrollLeft;
-    return Math.round(currentScroll / cardWidth);
-}
-
-// Scroll to next certificate
-function scrollToNextCertificate() {
-    const currentIndex = getCurrentCardIndex();
-    const nextIndex = currentIndex + 1;
-    scrollToCertificate(nextIndex);
-}
-
-// Scroll to previous certificate
-function scrollToPrevCertificate() {
-    const currentIndex = getCurrentCardIndex();
-    const prevIndex = currentIndex - 1;
-    scrollToCertificate(prevIndex);
-}
-
-// Prevent card collapse on arrow click
-document.querySelectorAll('.nav-button').forEach(button => {
-    button.addEventListener('click', (e) => {
-        e.stopPropagation(); // Prevent event from bubbling up to the card header
+function closeAllDetails() {
+    const allDetails = document.querySelectorAll('.certification-details');
+    allDetails.forEach(details => {
+        details.style.height = '0';
     });
+
+    const allHeaders = document.querySelectorAll('.certification-header.active');
+    allHeaders.forEach(header => {
+        header.classList.remove('active');
+    });
+}
+
+// Event listeners for prev/next buttons
+document.querySelector('.prev-certificate').addEventListener('click', function() {
+    const currentIndex = getCurrentIndex();
+    if (currentIndex > 0) {
+        scrollToCertificate(currentIndex - 1);
+    }
 });
 
-// Ensure only one card's details are open at a time
-document.querySelectorAll('.certification-header').forEach(header => {
-    header.addEventListener('click', () => {
-        closeAllDetails(); // Close all other card details
-        toggleDetails(header); // Open the clicked card's details
-    });
+document.querySelector('.next-certificate').addEventListener('click', function() {
+    const currentIndex = getCurrentIndex();
+    const totalCards = document.querySelectorAll('.certification-card').length;
+    if (currentIndex < totalCards - 1) {
+        scrollToCertificate(currentIndex + 1);
+    }
 });
 
-// Close card details when clicking outside the card
+// Close card details when clicking outside
 document.addEventListener('click', (e) => {
-    const isCardHeader = e.target.closest('.certification-header'); // Check if the click is on a card header
-    const isCardContent = e.target.closest('.certification-details'); // Check if the click is on the card details
-
-    // If the click is not on the card header or card details, close all details
-    if (!isCardHeader && !isCardContent) {
+    const isCardHeader = e.target.closest('.certification-header');
+    const isCardContent = e.target.closest('.certification-details');
+    const isNavButton = e.target.closest('.nav-button');
+    
+    if (!isCardHeader && !isCardContent && !isNavButton) {
         closeAllDetails();
     }
 });

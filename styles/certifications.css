@@ -1,3 +1,4 @@
+/* Page Container */
 .page-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -13,6 +14,16 @@
     position: relative;
 }
 
+/* Page Title */
+.page-title {
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* Certifications Container */
 .certifications-container {
     width: 100%;
     max-width: 800px;
@@ -24,21 +35,20 @@
 
 .certificates-track {
     display: flex;
-    transition: transform 0.5s ease;
     gap: 2rem;
-    scroll-snap-type: x mandatory;
-    overflow-x: hidden; /* Hide the scrollbar */
+    transition: transform 0.3s ease;
+    will-change: transform;
 }
 
+/* Certification Card */
 .certification-card {
     background: #1a1a1a;
     border-radius: 20px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 100%;
     flex: 0 0 100%;
-    scroll-snap-align: start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .certification-card:hover {
@@ -46,12 +56,20 @@
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
 
+/* Card Header */
 .certification-header {
     padding: 2rem;
     cursor: pointer;
     background: #1a1a1a;
 }
 
+.certification-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Image Wrapper */
 .certification-image-wrapper {
     width: 100%;
     height: 400px;
@@ -69,22 +87,29 @@
     padding: 1rem;
 }
 
+/* Title and Provider */
+.certification-title {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
 .certification-provider {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 0.75rem;
     color: #60a5fa;
     font-size: 1.2rem;
     font-weight: 500;
-    margin-bottom: 1.5rem;
 }
 
 .certification-provider i {
     color: #60a5fa;
-    font-size: 1.4rem;
 }
 
+/* Toggle Icon */
 .toggle-icon {
     display: flex;
     justify-content: center;
@@ -101,6 +126,7 @@
     transform: rotate(180deg);
 }
 
+/* Card Details */
 .certification-details {
     height: 0;
     overflow: hidden;
@@ -136,32 +162,30 @@
     color: #60a5fa;
 }
 
-.details-section p {
+.details-section p,
+.details-section ul li {
     color: #e5e7eb;
     line-height: 1.8;
     font-size: 1.1rem;
 }
 
-.content-list {
-    list-style: none;
+.details-section ul {
+    list-style-type: none;
     padding: 0;
-    margin: 0;
 }
 
-.content-list li {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 0.75rem 0;
-    color: #e5e7eb;
-    font-size: 1.1rem;
+.details-section ul li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
 }
 
-.content-list li i {
-    color: #34d399;
-    font-size: 1.1rem;
+.details-section ul li:before {
+    content: "•";
+    color: #60a5fa;
 }
 
+/* Navigation Buttons */
 .nav-button {
     position: absolute;
     top: 50%;
@@ -171,13 +195,19 @@
     color: #60a5fa;
     font-size: 2rem;
     cursor: pointer;
-    transition: transform 0.3s ease, color 0.3s ease;
+    transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease;
     padding: 1rem;
+    z-index: 10;
 }
 
-.nav-button:hover {
+.nav-button:not(:disabled):hover {
     color: #93c5fd;
     transform: translateY(-50%) scale(1.1);
+}
+
+.nav-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
 }
 
 .prev-certificate {
@@ -188,6 +218,7 @@
     right: -60px;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
     .page-container {
         padding-top: 80px;
@@ -208,57 +239,16 @@
     .next-certificate {
         right: -40px;
     }
-}
-/* Add this to your existing CSS file */
 
-/* Skills Section Styling */
-.details-section.skills {
-    background: #262626;
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-}
-
-.skills-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem;
-}
-
-.skills-list li {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.75rem;
-    background: #1a1a1a;
-    border-radius: 10px;
-    color: #e5e7eb;
-    font-size: 1rem;
-    font-weight: 500;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.skills-list li:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.skills-list li i {
-    color: #60a5fa;
-    font-size: 1.2rem;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .skills-list {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    .certification-title {
+        font-size: 1.25rem;
     }
 
-    .skills-list li {
-        font-size: 0.9rem;
-        padding: 0.5rem;
+    .certification-provider {
+        font-size: 1rem;
+    }
+
+    .details-section {
+        padding: 1.5rem;
     }
 }
