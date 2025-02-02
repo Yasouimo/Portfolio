@@ -15,5 +15,5 @@ Welcome to my personal portfolio! This project showcases my skills, projects, ce
 - **Frontend**: HTML, CSS, JavaScript
 - **Icons**: Font Awesome
 - **Animations**: AOS (Animate On Scroll)
-- **Deployment**: [Vercel](https://portfolio-six-chi-47.vercel.app/index.html)
+- **Deployment**: [Github](https://yasouimo.github.io/Portfolio/)
 
