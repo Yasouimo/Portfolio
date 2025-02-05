@@ -222,3 +222,11 @@
     border-radius: 5px;
     border: 1px solid rgba(96, 165, 250, 0.2); /* Light border for definition */
 }
+
+.company-name {
+    display: block;
+    font-size: 0.9em;
+    color: #9ca3af;
+    margin-top: 0.5rem;
+    text-align: right;
+}
