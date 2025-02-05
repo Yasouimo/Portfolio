@@ -1,6 +1,7 @@
 # My Portfolio
 
 Welcome to my personal portfolio! This project showcases my skills, projects, certifications, and education. It is designed to provide a clean and modern user experience, with responsive design and smooth animations.
+![Image](https://github.com/user-attachments/assets/8dc3665c-681c-4875-9c69-80967801ad52)
 
 ## Features
 
