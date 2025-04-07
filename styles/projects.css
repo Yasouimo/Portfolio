@@ -28,29 +28,32 @@
     transition: transform 0.5s ease;
     gap: 2rem;
     scroll-snap-type: x mandatory;
-    overflow-x: hidden; /* Hide the scrollbar */
+    overflow-x: hidden;
 }
 
 .project-card {
-    background: #1a1a1a;
+    background: rgba(16, 185, 129, 0.05); /* Matching the green theme with transparency */
+    border: 1px solid rgba(16, 185, 129, 0.1); /* Subtle green border */
     border-radius: 20px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
     width: 100%;
     flex: 0 0 100%;
     scroll-snap-align: start;
+    backdrop-filter: blur(10px);
 }
 
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.2);
+    border-color: rgba(16, 185, 129, 0.3);
 }
 
 .project-header {
     padding: 2rem;
     cursor: pointer;
-    background: #1a1a1a;
+    background: transparent;
 }
 
 .project-image-wrapper {
@@ -60,14 +63,19 @@
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(16, 185, 129, 0.2);
 }
 
 .project-image {
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    background: #ffffff;
-    padding: 1rem;
+    object-fit: cover; /* Changed to cover for better image display */
+    background: #1a1a1a;
+    transition: transform 0.3s ease;
+}
+
+.project-image:hover {
+    transform: scale(1.05);
 }
 
 .project-technologies {
@@ -75,22 +83,22 @@
     align-items: center;
     justify-content: center;
     gap: 0.75rem;
-    color: #60a5fa;
-    font-size: 1.2rem;
+    color: #10b981; /* Updated to match the green theme */
+    font-size: 1.1rem;
     font-weight: 500;
     margin-bottom: 1.5rem;
+    flex-wrap: wrap; /* Better mobile support */
 }
 
 .project-technologies i {
-    color: #60a5fa;
-    font-size: 1.4rem;
+    color: #10b981;
 }
 
 .toggle-icon {
     display: flex;
     justify-content: center;
     margin-top: 1.5rem;
-    color: #9ca3af;
+    color: #10b981;
 }
 
 .toggle-icon i {
@@ -106,7 +114,7 @@
     height: 0;
     overflow: hidden;
     transition: height 0.3s ease;
-    background: #1a1a1a;
+    background: transparent;
 }
 
 .details-grid {
@@ -117,24 +125,25 @@
 }
 
 .details-section {
-    background: #262626;
+    background: rgba(16, 185, 129, 0.05);
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(16, 185, 129, 0.1);
 }
 
 .details-section h3 {
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    color: #ffffff;
+    color: #10b981;
     font-size: 1.25rem;
     margin-bottom: 1.5rem;
     font-weight: 600;
 }
 
 .details-section h3 i {
-    color: #60a5fa;
+    color: #10b981;
 }
 
 .details-section p {
@@ -147,58 +156,43 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: none;
-    border: none;
-    color: #60a5fa;
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    color: #10b981;
     font-size: 2rem;
     cursor: pointer;
-    transition: transform 0.3s ease, color 0.3s ease;
+    transition: all 0.3s ease;
     padding: 1rem;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .nav-button:hover {
-    color: #93c5fd;
+    background: rgba(16, 185, 129, 0.2);
     transform: translateY(-50%) scale(1.1);
 }
 
 .prev-project {
-    left: -60px;
+    left: 1rem;
 }
 
 .next-project {
-    right: -60px;
+    right: 1rem;
 }
 
-@media (max-width: 768px) {
-    .page-container {
-        padding-top: 80px;
-    }
-
-    .project-image-wrapper {
-        height: 300px;
-    }
-
-    .nav-button {
-        font-size: 1.5rem;
-    }
-
-    .prev-project {
-        left: -40px;
-    }
-
-    .next-project {
-        right: -40px;
-    }
-}
 .github-link {
     margin-left: 10px;
-    color: #60a5fa; /* Match the color scheme */
+    color: #10b981;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .github-link:hover {
-    color: #93c5fd; /* Adjust the hover color as needed */
+    color: #34d399;
 }
 
 .project-date {
@@ -207,26 +201,86 @@
     gap: 0.5rem;
     margin-top: 0.5rem;
     font-size: 0.9em;
-    color: #9ca3af; /* Match the color scheme */
+    color: #9ca3af;
 }
 
 .project-date i {
-    color: #60a5fa; /* Match the color scheme */
+    color: #10b981;
 }
 
 .date-range {
     font-weight: 500;
-    color: #e5e7eb; /* Light text color for better readability */
-    background: rgba(96, 165, 250, 0.1); /* Subtle background for emphasis */
+    color: #e5e7eb;
+    background: rgba(16, 185, 129, 0.1);
     padding: 0.25rem 0.5rem;
     border-radius: 5px;
-    border: 1px solid rgba(96, 165, 250, 0.2); /* Light border for definition */
+    border: 1px solid rgba(16, 185, 129, 0.2);
 }
 
 .company-name {
     display: block;
     font-size: 0.9em;
-    color: #9ca3af;
+    color: #10b981;
     margin-top: 0.5rem;
     text-align: right;
+}
+
+/* Mobile Responsiveness Improvements */
+@media (max-width: 768px) {
+    .page-container {
+        padding-top: 80px;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .project-image-wrapper {
+        height: 250px;
+    }
+
+    .project-header {
+        padding: 1.5rem;
+    }
+
+    .details-section {
+        padding: 1.5rem;
+    }
+
+    .nav-button {
+        width: 45px;
+        height: 45px;
+        font-size: 1.25rem;
+    }
+
+    .prev-project {
+        left: 0.5rem;
+    }
+
+    .next-project {
+        right: 0.5rem;
+    }
+
+    .project-technologies {
+        font-size: 1rem;
+    }
+
+    .details-section p {
+        font-size: 1rem;
+    }
+}
+
+/* Additional Mobile Optimizations */
+@media (max-width: 480px) {
+    .project-card {
+        margin: 0 0.5rem;
+    }
+
+    .project-image-wrapper {
+        height: 200px;
+    }
+
+    .nav-button {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
 }
