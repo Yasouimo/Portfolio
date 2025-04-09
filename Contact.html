@@ -76,36 +76,6 @@
         </div>
     </main>
 
-    <!-- Inline script to fix mobile navigation issues -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Get elements
-            const navToggle = document.getElementById('mobile-menu-toggle');
-            const navLinks = document.querySelector('.nav-links');
-            const body = document.body;
-            
-            // Add click event to toggle
-            if (navToggle) {
-                navToggle.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    navLinks.classList.toggle('active');
-                    navToggle.classList.toggle('active');
-                    body.classList.toggle('no-scroll');
-                    console.log('Menu toggled');
-                });
-            }
-            
-            // Add click events to links to close menu when clicked
-            const links = document.querySelectorAll('.nav-link');
-            links.forEach(link => {
-                link.addEventListener('click', function() {
-                    navLinks.classList.remove('active');
-                    navToggle.classList.remove('active');
-                    body.classList.remove('no-scroll');
-                });
-            });
-        });
-    </script>
     
     <!-- Optional: Load your other scripts -->
     <script src="scripts/script.js"></script>
