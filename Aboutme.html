@@ -19,7 +19,7 @@
             <li><a href="Aboutme.html" class="nav-link">About Me</a></li>
             <li><a href="Contact.html" class="nav-link">Contact</a></li>
         </ul>
-        <div class="nav-toggle">
+        <div class="nav-toggle" id="mobile-menu-toggle">
             <span></span>
             <span></span>
             <span></span>
@@ -159,8 +159,63 @@
         </section>
     </main>
     
-    <!-- Load the main script first, then page-specific scripts -->
-    <script src="scripts/script.js"></script>
-    <script src="scripts/Aboutme.js"></script>
+    <!-- Inline script to fix mobile navigation issues -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile navigation toggle
+            const navToggle = document.getElementById('mobile-menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            const body = document.body;
+            
+            if (navToggle) {
+                navToggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    navLinks.classList.toggle('active');
+                    navToggle.classList.toggle('active');
+                    body.classList.toggle('no-scroll');
+                    console.log('Menu toggled');
+                });
+            }
+            
+            // Close menu when links are clicked
+            const links = document.querySelectorAll('.nav-link');
+            links.forEach(link => {
+                link.addEventListener('click', function() {
+                    navLinks.classList.remove('active');
+                    navToggle.classList.remove('active');
+                    body.classList.remove('no-scroll');
+                });
+            });
+
+            // Handle About Me page specific functionality
+            const navItems = document.querySelectorAll('.nav-item');
+            const sections = document.querySelectorAll('.content-section');
+            
+            navItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const targetSection = this.getAttribute('data-section');
+                    
+                    // Remove active class from all sections and add to target
+                    sections.forEach(section => {
+                        section.classList.remove('active');
+                        if (section.id === targetSection) {
+                            section.classList.add('active');
+                        }
+                    });
+                    
+                    // Update active nav item
+                    navItems.forEach(navItem => {
+                        navItem.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                });
+            });
+            
+            // Initialize Lucide icons if present
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        });
+    </script>
 </body>
 </html>

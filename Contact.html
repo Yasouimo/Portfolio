@@ -18,7 +18,7 @@
             <li><a href="Aboutme.html" class="nav-link">About Me</a></li>
             <li><a href="Contact.html" class="nav-link">Contact</a></li>
         </ul>
-        <div class="nav-toggle">
+        <div class="nav-toggle" id="mobile-menu-toggle">
             <span></span>
             <span></span>
             <span></span>
@@ -76,11 +76,38 @@
         </div>
     </main>
 
-   
+    <!-- Inline script to fix mobile navigation issues -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get elements
+            const navToggle = document.getElementById('mobile-menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            const body = document.body;
+            
+            // Add click event to toggle
+            if (navToggle) {
+                navToggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    navLinks.classList.toggle('active');
+                    navToggle.classList.toggle('active');
+                    body.classList.toggle('no-scroll');
+                    console.log('Menu toggled');
+                });
+            }
+            
+            // Add click events to links to close menu when clicked
+            const links = document.querySelectorAll('.nav-link');
+            links.forEach(link => {
+                link.addEventListener('click', function() {
+                    navLinks.classList.remove('active');
+                    navToggle.classList.remove('active');
+                    body.classList.remove('no-scroll');
+                });
+            });
+        });
+    </script>
     
-    <!-- Make sure script.js is loaded first -->
-    <script src="scripts/script.js"></script>
-    <!-- Then load any page-specific scripts -->
+    <!-- Optional: Load your other scripts -->
     <script src="scripts/Contact.js"></script>
 </body>
 </html>
