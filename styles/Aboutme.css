@@ -1,3 +1,4 @@
+/* CSS file (Aboutme.css) */
 :root {
     --primary-color: #00ff9d;
     --bg-dark: #0a0a0a;
@@ -36,13 +37,6 @@ body {
     z-index: 10;
 }
 
-.mobile-nav {
-    display: none;
-    padding: 1rem;
-    background-color: var(--card-bg);
-    margin-bottom: 1rem;
-}
-
 .nav-item {
     padding: 1rem 2rem;
     cursor: pointer;
@@ -52,6 +46,35 @@ body {
 }
 
 .nav-item:hover, .nav-item.active {
+    background-color: var(--primary-color);
+    color: var(--bg-dark);
+}
+
+/* Mobile Tab Navigation */
+.mobile-tabs {
+    display: none;
+    justify-content: center;
+    background-color: var(--card-bg);
+    margin-bottom: 1rem;
+    position: fixed;
+    top: var(--nav-height);
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.mobile-tab {
+    padding: 1rem 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    text-align: center;
+    flex: 1;
+}
+
+.mobile-tab:hover, .mobile-tab.active {
     background-color: var(--primary-color);
     color: var(--bg-dark);
 }
@@ -247,25 +270,14 @@ main {
         display: none;
     }
 
-    .mobile-nav {
+    .mobile-tabs {
         display: flex;
-        justify-content: center;
-        gap: 1rem;
-        position: fixed;
-        top: var(--nav-height);
-        left: 0;
-        right: 0;
-        z-index: 100;
-    }
-
-    .mobile-nav .nav-item {
-        padding: 0.75rem 1.5rem;
-        font-size: 1rem;
     }
 
     main {
         margin-left: 0;
         padding: 1rem;
+        margin-top: 60px; /* Add space for mobile tabs */
     }
 
     .timeline-card {
@@ -315,5 +327,10 @@ main {
 
     .location {
         font-size: 0.9rem;
+    }
+
+    .mobile-tab {
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
     }
 }

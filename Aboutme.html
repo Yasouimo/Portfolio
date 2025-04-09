@@ -1,3 +1,4 @@
+<!-- HTML file (Aboutme.html) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +12,8 @@
 </head>
 <body>
     <nav class="navbar">
-        <div class="nav-brand">BY</div>
+        <div class="navbar">
+            <a href="index.html" class="nav-brand">BY</a>
         <ul class="nav-links">
             <li><a href="index.html" class="nav-link">Home</a></li>
             <li><a href="projects.html" class="nav-link">Projects</a></li>
@@ -31,9 +33,16 @@
     </button>
 
     <div class="page-container">
+        <!-- Desktop sidebar navigation -->
         <div class="sidebar">
             <div class="nav-item active" data-section="education">Education</div>
             <div class="nav-item" data-section="skills">Skills</div>
+        </div>
+
+        <!-- Mobile tab navigation -->
+        <div class="mobile-tabs">
+            <div class="mobile-tab active" data-section="education">Education</div>
+            <div class="mobile-tab" data-section="skills">Skills</div>
         </div>
 
         <main class="main-content">

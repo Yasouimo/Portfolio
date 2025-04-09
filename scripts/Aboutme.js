@@ -1,3 +1,4 @@
+// JavaScript file (Aboutme.js)
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize Lucide icons
     lucide.createIcons();
@@ -6,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const sidebar = document.querySelector('.sidebar');
     const sidebarToggle = document.querySelector('.sidebar-toggle');
     const navItems = document.querySelectorAll('.nav-item');
+    const mobileTabs = document.querySelectorAll('.mobile-tab');
     const contentSections = document.querySelectorAll('.content-section');
 
     // Mobile sidebar toggle
@@ -16,29 +18,55 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Navigation functionality
+    // Function to show a specific section
+    function showSection(sectionId) {
+        // Update navigation items (desktop)
+        navItems.forEach(navItem => {
+            if (navItem.getAttribute('data-section') === sectionId) {
+                navItem.classList.add('active');
+            } else {
+                navItem.classList.remove('active');
+            }
+        });
+        
+        // Update mobile tabs
+        mobileTabs.forEach(tab => {
+            if (tab.getAttribute('data-section') === sectionId) {
+                tab.classList.add('active');
+            } else {
+                tab.classList.remove('active');
+            }
+        });
+        
+        // Show corresponding section
+        contentSections.forEach(section => {
+            if (section.id === sectionId) {
+                section.classList.add('active');
+            } else {
+                section.classList.remove('active');
+            }
+        });
+    }
+
+    // Desktop navigation functionality
     navItems.forEach(item => {
         item.addEventListener('click', function() {
-            // Remove active class from all items
-            navItems.forEach(navItem => navItem.classList.remove('active'));
-            
-            // Add active class to clicked item
-            this.classList.add('active');
-            
-            // Show corresponding section
             const sectionId = this.getAttribute('data-section');
-            contentSections.forEach(section => {
-                section.classList.remove('active');
-                if (section.id === sectionId) {
-                    section.classList.add('active');
-                }
-            });
+            showSection(sectionId);
 
             // Close sidebar on mobile after selection
             if (window.innerWidth <= 768) {
                 sidebar.classList.remove('active');
                 document.body.classList.remove('no-scroll');
             }
+        });
+    });
+
+    // Mobile tabs functionality
+    mobileTabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+            const sectionId = this.getAttribute('data-section');
+            showSection(sectionId);
         });
     });
 
@@ -65,8 +93,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Set initial active section
-    const defaultNavItem = document.querySelector('.nav-item[data-section="education"]');
-    if (defaultNavItem) {
-        defaultNavItem.classList.add('active');
-    }
+    const defaultSection = "education";
+    showSection(defaultSection);
 });
