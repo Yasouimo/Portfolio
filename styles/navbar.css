@@ -64,6 +64,7 @@
   font-weight: 600;
 }
 
+/* Mobile Menu Button */
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -81,11 +82,12 @@
   transition: all 0.3s ease;
 }
 
+/* Prevent scrolling when menu is open */
 .no-scroll {
   overflow: hidden;
 }
 
-/* Mobile responsive */
+/* Responsive Styles */
 @media (max-width: 768px) {
   .navbar {
     padding: 1rem 5%;
@@ -121,10 +123,6 @@
     width: auto;
     text-align: center;
     padding: 0.5rem 1rem;
-  }
-
-  .nav-link::after {
-    bottom: -5px;
   }
 
   .nav-toggle.active span:nth-child(1) {
