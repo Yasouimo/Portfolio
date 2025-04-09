@@ -2,72 +2,71 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize Lucide icons
     lucide.createIcons();
 
-    // Mobile navigation toggle
-    const navToggle = document.querySelector('.nav-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    
-    navToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        
-        // Animate hamburger to X
-        const spans = navToggle.querySelectorAll('span');
-        navToggle.classList.toggle('active');
-        if (navToggle.classList.contains('active')) {
-            spans[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
-            spans[1].style.opacity = '0';
-            spans[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
-        } else {
-            spans[0].style.transform = 'none';
-            spans[1].style.opacity = '1';
-            spans[2].style.transform = 'none';
-        }
-    });
+    // DOM elements
+    const sidebar = document.querySelector('.sidebar');
+    const sidebarToggle = document.querySelector('.sidebar-toggle');
+    const navItems = document.querySelectorAll('.nav-item');
+    const contentSections = document.querySelectorAll('.content-section');
 
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!navToggle.contains(e.target) && !navLinks.contains(e.target)) {
-            navLinks.classList.remove('active');
-            const spans = navToggle.querySelectorAll('span');
-            spans[0].style.transform = 'none';
-            spans[1].style.opacity = '1';
-            spans[2].style.transform = 'none';
-            navToggle.classList.remove('active');
-        }
-    });
+    // Mobile sidebar toggle
+    if (sidebarToggle) {
+        sidebarToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+            document.body.classList.toggle('no-scroll');
+        });
+    }
 
     // Navigation functionality
-    const navItems = document.querySelectorAll('.nav-item');
-    const sections = document.querySelectorAll('.content-section');
-
     navItems.forEach(item => {
-        item.addEventListener('click', () => {
-            const sectionId = item.getAttribute('data-section');
+        item.addEventListener('click', function() {
+            // Remove active class from all items
+            navItems.forEach(navItem => navItem.classList.remove('active'));
             
-            // Update active states
-            navItems.forEach(nav => nav.classList.remove('active'));
-            document.querySelectorAll(`[data-section="${sectionId}"]`).forEach(nav => nav.classList.add('active'));
+            // Add active class to clicked item
+            this.classList.add('active');
             
-            sections.forEach(section => {
+            // Show corresponding section
+            const sectionId = this.getAttribute('data-section');
+            contentSections.forEach(section => {
                 section.classList.remove('active');
                 if (section.id === sectionId) {
                     section.classList.add('active');
                 }
             });
+
+            // Close sidebar on mobile after selection
+            if (window.innerWidth <= 768) {
+                sidebar.classList.remove('active');
+                document.body.classList.remove('no-scroll');
+            }
         });
     });
 
-    // Skills animation
+    // Skill items animation
     const skillItems = document.querySelectorAll('.skill-item');
-    
     skillItems.forEach(item => {
-        item.addEventListener('click', () => {
-            item.classList.remove('bounce');
-            void item.offsetWidth; // Trigger reflow
-            item.classList.add('bounce');
+        item.addEventListener('click', function() {
+            this.classList.remove('bounce');
+            void this.offsetWidth; // Trigger reflow
+            this.classList.add('bounce');
         });
+    });
+
+    // Close sidebar when clicking outside on mobile
+    document.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768 && sidebar.classList.contains('active')) {
+            if (!sidebar.contains(e.target) && 
+                !sidebarToggle.contains(e.target) && 
+                e.target !== sidebarToggle) {
+                sidebar.classList.remove('active');
+                document.body.classList.remove('no-scroll');
+            }
+        }
     });
 
     // Set initial active section
-    document.querySelector('.nav-item[data-section="education"]').classList.add('active');
-    document.getElementById('education').classList.add('active');
+    const defaultNavItem = document.querySelector('.nav-item[data-section="education"]');
+    if (defaultNavItem) {
+        defaultNavItem.classList.add('active');
+    }
 });
