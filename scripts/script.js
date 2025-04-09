@@ -40,4 +40,21 @@ document.addEventListener('DOMContentLoaded', function() {
             body.classList.remove('no-scroll');
         }
     });
+
+    // Add hover effect to contact cards
+    const cards = document.querySelectorAll('.contact-card');
+    
+    if (cards.length > 0) {
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                const icon = card.querySelector('.icon-wrapper i');
+                icon.style.transform = 'scale(1.1)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                const icon = card.querySelector('.icon-wrapper i');
+                icon.style.transform = 'scale(1)';
+            });
+        });
+    }
 });
