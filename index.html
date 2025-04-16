@@ -6,13 +6,13 @@
   <title>Bellmir Yahya - Portfolio</title>
   <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="styles/navbar.css">
+  <link rel="stylesheet" href="styles/language-switcher.css">
   <!-- Add Font Awesome for social icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <nav class="navbar">
-    <div class="navbar">
-        <a href="index.html" class="nav-brand">BY</a>
+    <a href="index.html" class="nav-brand">BY</a>
     <ul class="nav-links">
         <li><a href="index.html" class="nav-link">Home</a></li>
         <li><a href="projects.html" class="nav-link">Projects</a></li>
@@ -25,22 +25,25 @@
         <span></span>
         <span></span>
     </div>
-</nav>
+  </nav>
 
   <header class="hero-section">
     <div class="content">
       <h1>Bellmir Yahya</h1>
       <p class="subtitle"></p>
       <!--<h2>Hello I'm <span>Bellmir Yahya</span></h2>-->
-      <p>
+      <p class="bio" data-en="I specialize in building and designing AI-based solutions across multiple industries, leveraging my expertise in various technologies and programming languages. As an AI and Data Science student, I am passionate about web development and software engineering, always seeking to explore new technologies and enhance my skills through hands-on projects.">
         I specialize in building and designing AI-based solutions across multiple industries, leveraging my expertise in various technologies and programming languages. As an AI and Data Science student, I am passionate about web development and software engineering, always seeking to explore new technologies and enhance my skills through hands-on projects.
+      </p>
+      <p class="bio" data-fr="Je suis spécialisé dans la construction et la conception de solutions basées sur l'IA dans plusieurs industries, en tirant parti de mon expertise dans diverses technologies et langages de programmation. En tant qu'étudiant en IA et science des données, je suis passionné par le développement web et l'ingénierie logicielle, cherchant toujours à explorer de nouvelles technologies et à améliorer mes compétences par le biais de projets pratiques." style="display:none">
+        Je suis spécialisé dans la construction et la conception de solutions basées sur l'IA dans plusieurs industries, en tirant parti de mon expertise dans diverses technologies et langages de programmation. En tant qu'étudiant en IA et science des données, je suis passionné par le développement web et l'ingénierie logicielle, cherchant toujours à explorer de nouvelles technologies et à améliorer mes compétences par le biais de projets pratiques.
       </p>
       <div class="buttons">
         <a href="recources/Cv_Bellmir_Yahya_AI_DataScience.pdf" class="btn" download>
-            <i class="fas fa-download"></i> CV (FR)
+            <i class="fas fa-download"></i> <span data-en="CV (FR)" data-fr="CV (FR)">CV (FR)</span>
           </a>
           <a href="recources/Resume_Bellmir_Yahya_AI_DataScience.pdf" class="btn" download>
-            <i class="fas fa-download"></i> CV (EN)
+            <i class="fas fa-download"></i> <span data-en="CV (EN)" data-fr="CV (EN)">CV (EN)</span>
           </a>
           <a href="https://github.com/Yasouimo" class="btn social-btn github" target="_blank">
             <i class="fab fa-github"></i> GitHub
@@ -58,22 +61,28 @@
     <div class="stats">
       <div>
         <h3>5+</h3>
-        <p>Projects Completed</p>
+        <p data-en="Projects Completed" data-fr="Projets Complétés">Projects Completed</p>
       </div>
       <div>
         <h3>7+</h3>
-        <p>Certifications</p>
+        <p data-en="Certifications" data-fr="Certifications">Certifications</p>
       </div>
       <div>
         <h3>16+</h3>
-        <p>Tools && Technologies</p>
+        <p data-en="Tools && Technologies" data-fr="Outils && Technologies">Tools && Technologies</p>
       </div>
       <div>
         <h3>191+</h3>
-        <p>Code Committed</p>
+        <p data-en="Code Committed" data-fr="Commits de Code">Code Committed</p>
       </div>
+    </div>
+    <div class="language-switcher">
+      <button id="lang-en" class="lang-btn active">EN</button>
+      <span class="lang-separator">|</span>
+      <button id="lang-fr" class="lang-btn">FR</button>
     </div>
   </footer>
   <script src="scripts/script.js"></script>
+  <script src="scripts/language-switcher.js"></script>
 </body>
 </html>
