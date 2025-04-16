@@ -6,19 +6,19 @@
     <title>Contact - Bellmir Yahya</title>
     <link rel="stylesheet" href="styles/navbar.css">
     <link rel="stylesheet" href="styles/Contact.css">
+    <link rel="stylesheet" href="styles/language-switcher.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <nav class="navbar">
-        <div class="navbar">
-            <a href="index.html" class="nav-brand">BY</a>
-            <ul class="nav-links">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="projects.html" class="nav-link">Projects</a></li>
-                <li><a href="Certifications.html" class="nav-link">Certifications</a></li>
-                <li><a href="Aboutme.html" class="nav-link">About Me</a></li>
-                <li><a href="Contact.html" class="nav-link active">Contact</a></li>
-            </ul>
+        <a href="index.html" class="nav-brand">BY</a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link" data-en="Home" data-fr="Accueil">Home</a></li>
+            <li><a href="projects.html" class="nav-link" data-en="Projects" data-fr="Projets">Projects</a></li>
+            <li><a href="Certifications.html" class="nav-link" data-en="Certifications" data-fr="Certifications">Certifications</a></li>
+            <li><a href="Aboutme.html" class="nav-link" data-en="About Me" data-fr="À Propos">About Me</a></li>
+            <li><a href="Contact.html" class="nav-link active" data-en="Contact" data-fr="Contact">Contact</a></li>
+        </ul>
         <div class="nav-toggle">
             <span></span>
             <span></span>
@@ -28,15 +28,15 @@
 
     <main class="contact-container">
         <div class="contact-content">
-            <h1>Get in Touch</h1>
-            <p class="subtitle">Let's connect and create something amazing together</p>
+            <h1 data-en="Get in Touch" data-fr="Entrer en Contact">Get in Touch</h1>
+            <p class="subtitle" data-en="Let's connect and create something amazing together" data-fr="Connectons-nous et créons quelque chose d'incroyable ensemble">Let's connect and create something amazing together</p>
 
             <div class="contact-grid">
                 <div class="contact-card">
                     <div class="icon-wrapper">
                         <i class="fas fa-phone"></i>
                     </div>
-                    <h3>Phone</h3>
+                    <h3 data-en="Phone" data-fr="Téléphone">Phone</h3>
                     <p>+212 778664075</p>
                 </div>
 
@@ -52,13 +52,13 @@
                     <div class="icon-wrapper">
                         <i class="fas fa-map-marker-alt"></i>
                     </div>
-                    <h3>Location</h3>
-                    <p>Meknes, Morocco</p>
+                    <h3 data-en="Location" data-fr="Emplacement">Location</h3>
+                    <p data-en="Meknes, Morocco" data-fr="Meknès, Maroc">Meknes, Morocco</p>
                 </div>
             </div>
 
             <div class="social-links">
-                <h2>Connect With Me</h2>
+                <h2 data-en="Connect With Me" data-fr="Connectez-vous Avec Moi">Connect With Me</h2>
                 <div class="social-grid">
                     <a href="https://www.linkedin.com/in/yahya-bellmir-a54176284" class="social-item" target="_blank">
                         <i class="fab fa-linkedin"></i>
@@ -77,7 +77,16 @@
         </div>
     </main>
 
+    <footer>
+        <div class="language-switcher">
+            <button id="lang-en" class="lang-btn active">EN</button>
+            <span class="lang-separator">|</span>
+            <button id="lang-fr" class="lang-btn">FR</button>
+        </div>
+    </footer>
+
     <!-- Load scripts at the end of the body -->
+    <script src="scripts/language-switcher.js"></script>
     <script src="scripts/Contact.js"></script>
 </body>
 </html>
