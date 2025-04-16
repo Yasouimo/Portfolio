@@ -312,3 +312,16 @@ h2 span {
       height: 240px;
   }
 }
+
+/* Updated footer styling */
+footer {
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Subtitle in French mode */
+.subtitle.fr::after {
+  content: 'Ingénieur en IA & Science des Données';
+}
