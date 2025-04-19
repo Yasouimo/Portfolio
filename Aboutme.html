@@ -1,4 +1,3 @@
-<!-- HTML file (Aboutme.html) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +6,7 @@
     <title>About Me - Bellmir Yahya</title>
     <link rel="stylesheet" href="styles/navbar.css">
     <link rel="stylesheet" href="styles/Aboutme.css">
+    <link rel="stylesheet" href="styles/language-switcher.css">
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -16,11 +16,11 @@
         <div class="navbar">
             <a href="index.html" class="nav-brand">BY</a>
         <ul class="nav-links">
-            <li><a href="index.html" class="nav-link">Home</a></li>
-            <li><a href="projects.html" class="nav-link">Projects</a></li>
-            <li><a href="Certifications.html" class="nav-link">Certifications</a></li>
-            <li><a href="Aboutme.html" class="nav-link active">About Me</a></li>
-            <li><a href="Contact.html" class="nav-link">Contact</a></li>
+            <li><a href="index.html" class="nav-link" data-en="Home" data-fr="Accueil">Home</a></li>
+            <li><a href="projects.html" class="nav-link" data-en="Projects" data-fr="Projets">Projects</a></li>
+            <li><a href="Certifications.html" class="nav-link" data-en="Certifications" data-fr="Certifications">Certifications</a></li>
+            <li><a href="Aboutme.html" class="nav-link active" data-en="About Me" data-fr="À Propos">About Me</a></li>
+            <li><a href="Contact.html" class="nav-link" data-en="Contact" data-fr="Contact">Contact</a></li>
         </ul>
         <div class="nav-toggle">
             <span></span>
@@ -36,14 +36,14 @@
     <div class="page-container">
         <!-- Desktop sidebar navigation -->
         <div class="sidebar">
-            <div class="nav-item active" data-section="education">Education</div>
-            <div class="nav-item" data-section="skills">Skills</div>
+            <div class="nav-item active" data-section="education" data-en="Education" data-fr="Éducation">Education</div>
+            <div class="nav-item" data-section="skills" data-en="Skills" data-fr="Compétences">Skills</div>
         </div>
 
         <!-- Mobile tab navigation -->
         <div class="mobile-tabs">
-            <div class="mobile-tab active" data-section="education">Education</div>
-            <div class="mobile-tab" data-section="skills">Skills</div>
+            <div class="mobile-tab active" data-section="education" data-en="Education" data-fr="Éducation">Education</div>
+            <div class="mobile-tab" data-section="skills" data-en="Skills" data-fr="Compétences">Skills</div>
         </div>
 
         <main class="main-content">
@@ -51,45 +51,45 @@
                 <div class="timeline-container">
                     <div class="timeline-card">
                         <div class="year">2021-2023</div>
-                        <h2>Preparatory Cycle</h2>
+                        <h2 data-en="Preparatory Cycle" data-fr="Cycle Préparatoire">Preparatory Cycle</h2>
                         <div class="location">
                             <i data-lucide="map-pin"></i>
-                            ENSAM engineering school, Meknes-Morocco
+                            <span data-en="ENSAM engineering school, Meknes-Morocco" data-fr="École d'ingénieur ENSAM, Meknès-Maroc">ENSAM engineering school, Meknes-Morocco</span>
                         </div>
                         <ul class="subjects">
                             <li>C++</li>
                             <li>Java</li>
                             <li>Databases</li>
-                            <li>Mathematics</li>
-                            <li>Algorithms</li>
-                            <li>Mechanics</li>
-                            <li>Electronics</li>
-                            <li>Material Science</li>
-                            <li>Chemistry</li>
-                            <li>Statistics</li>
+                            <li data-en="Mathematics" data-fr="Mathématiques">Mathematics</li>
+                            <li data-en="Algorithms" data-fr="Algorithmes">Algorithms</li>
+                            <li data-en="Mechanics" data-fr="Mécanique">Mechanics</li>
+                            <li data-en="Electronics" data-fr="Électronique">Electronics</li>
+                            <li data-en="Material Science" data-fr="Science des Matériaux">Material Science</li>
+                            <li data-en="Chemistry" data-fr="Chimie">Chemistry</li>
+                            <li data-en="Statistics" data-fr="Statistiques">Statistics</li>
                             <li>Industrie 4.0</li>
-                            <li>French</li>
-                            <li>English</li>
+                            <li data-en="French" data-fr="Français">French</li>
+                            <li data-en="English" data-fr="Anglais">English</li>
                         </ul>
                     </div>
 
                     <div class="timeline-card">
                         <div class="year">2024-2026</div>
-                        <h2>Engineering Cycle</h2>
+                        <h2 data-en="Engineering Cycle" data-fr="Cycle Ingénieur">Engineering Cycle</h2>
                         <div class="location">
                             <i data-lucide="map-pin"></i>
-                            ENSAM engineering school, Meknes-Morocco
+                            <span data-en="ENSAM engineering school, Meknes-Morocco" data-fr="École d'ingénieur ENSAM, Meknès-Maroc">ENSAM engineering school, Meknes-Morocco</span>
                         </div>
                         <ul class="subjects">
                             <li>Python</li>
                             <li>C#</li>
                             <li>AI</li>
-                            <li>Machine Learning</li>
-                            <li>Deep Learning</li>
+                            <li data-en="Machine Learning" data-fr="Apprentissage Automatique">Machine Learning</li>
+                            <li data-en="Deep Learning" data-fr="Apprentissage Profond">Deep Learning</li>
                             <li>Big Data</li>
-                            <li>Data Visualization</li>
-                            <li>Data preprocessing</li>
-                            <li>Data Mining</li>
+                            <li data-en="Data Visualization" data-fr="Visualisation des Données">Data Visualization</li>
+                            <li data-en="Data preprocessing" data-fr="Prétraitement des Données">Data preprocessing</li>
+                            <li data-en="Data Mining" data-fr="Extraction de Données">Data Mining</li>
                         </ul>
                     </div>
                 </div>
@@ -170,6 +170,15 @@
         </main>
     </div>
 
+    <footer>
+        <div class="language-switcher">
+            <button id="lang-en" class="lang-btn active">EN</button>
+            <span class="lang-separator">|</span>
+            <button id="lang-fr" class="lang-btn">FR</button>
+        </div>
+    </footer>
+
+    <script src="scripts/language-switcher.js"></script>
     <script src="scripts/Aboutme.js"></script>
     <script src="scripts/script.js"></script>
 </body>
