@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/navbar.css">
     <link rel="stylesheet" href="styles/projects.css">
+    <link rel="stylesheet" href="styles/language-switcher.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
@@ -15,11 +16,11 @@
         <div class="navbar">
             <a href="index.html" class="nav-brand">BY</a>
         <ul class="nav-links">
-            <li><a href="index.html" class="nav-link">Home</a></li>
-            <li><a href="projects.html" class="nav-link">Projects</a></li>
-            <li><a href="Certifications.html" class="nav-link">Certifications</a></li>
-            <li><a href="Aboutme.html" class="nav-link active">About Me</a></li>
-            <li><a href="Contact.html" class="nav-link">Contact</a></li>
+            <li><a href="index.html" class="nav-link" data-en="Home" data-fr="Accueil">Home</a></li>
+            <li><a href="projects.html" class="nav-link active" data-en="Projects" data-fr="Projets">Projects</a></li>
+            <li><a href="Certifications.html" class="nav-link" data-en="Certifications" data-fr="Certifications">Certifications</a></li>
+            <li><a href="Aboutme.html" class="nav-link" data-en="About Me" data-fr="À Propos">About Me</a></li>
+            <li><a href="Contact.html" class="nav-link" data-en="Contact" data-fr="Contact">Contact</a></li>
         </ul>
         <div class="nav-toggle">
             <span></span>
@@ -29,7 +30,7 @@
     </nav>
 
     <div class="page-container">
-        <h1 class="page-title" data-aos="fade-down" data-aos-delay="100">My Projects</h1>
+        <h1 class="page-title" data-aos="fade-down" data-aos-delay="100" data-en="My Projects" data-fr="Mes Projets">My Projects</h1>
         
         <div class="projects-container">
             <div class="projects-track">
@@ -41,7 +42,8 @@
                                 <img src="images/photo3.jfif" alt="Parking Recognition System" class="project-image">
                             </div>
                             <div class="project-intro">
-                                <h2 class="project-title">Parking Recognition System with a Reservation System
+                                <h2 class="project-title" data-en="Parking Recognition System with a Reservation System" data-fr="Système de Reconnaissance de Parking avec Système de Réservation">
+                                    Parking Recognition System with a Reservation System
                                     <a href="https://github.com/Yasouimo/Parking-Recognition-System-2-Bellmir_Chegdati" class="github-link" target="_blank">
                                         <i class="fab fa-github"></i>
                                     </a>
@@ -52,7 +54,7 @@
                                 </span>
                                 <span class="project-date">
                                     <i class="fas fa-calendar-alt"></i>
-                                    <span class="date-range">October 2024 - January 2025</span>
+                                    <span class="date-range" data-en="October 2024 - January 2025" data-fr="Octobre 2024 - Janvier 2025">October 2024 - January 2025</span>
                                 </span>
                             </div>
                         </div>
@@ -63,8 +65,8 @@
                     <div class="project-details">
                         <div class="details-grid">
                             <div class="details-section description">
-                                <h3><i class="fas fa-info-circle"></i> Description</h3>
-                                <p>The Parking Space Recognition System is designed to detect and manage parking spaces in real-time using computer vision and machine learning. This system includes several modules for data preparation, classification, and real-time parking spot analysis.</p>
+                                <h3><i class="fas fa-info-circle"></i> <span data-en="Description" data-fr="Description">Description</span></h3>
+                                <p data-en="The Parking Space Recognition System is designed to detect and manage parking spaces in real-time using computer vision and machine learning. This system includes several modules for data preparation, classification, and real-time parking spot analysis." data-fr="Le Système de Reconnaissance de Places de Parking est conçu pour détecter et gérer les places de stationnement en temps réel à l'aide de la vision par ordinateur et de l'apprentissage automatique. Ce système comprend plusieurs modules pour la préparation des données, la classification et l'analyse en temps réel des places de stationnement.">The Parking Space Recognition System is designed to detect and manage parking spaces in real-time using computer vision and machine learning. This system includes several modules for data preparation, classification, and real-time parking spot analysis.</p>
                             </div>
                         </div>
                     </div>
@@ -78,7 +80,8 @@
                                 <img src="images/photo5.png" alt="Football Game Analysis" class="project-image">
                             </div>
                             <div class="project-intro">
-                                <h2 class="project-title">Football Game Analysis
+                                <h2 class="project-title" data-en="Football Game Analysis" data-fr="Analyse de Match de Football">
+                                    Football Game Analysis
                                     <a href="https://github.com/Yasouimo/Football-Game-Possession-Traking" class="github-link" target="_blank">
                                         <i class="fab fa-github"></i>
                                     </a>
@@ -89,7 +92,7 @@
                                 </span>
                                 <span class="project-date">
                                     <i class="fas fa-calendar-alt"></i>
-                                    <span class="date-range">December 2024 - January 2025</span>
+                                    <span class="date-range" data-en="December 2024 - January 2025" data-fr="Décembre 2024 - Janvier 2025">December 2024 - January 2025</span>
                                 </span>
                             </div>
                         </div>
@@ -100,8 +103,8 @@
                     <div class="project-details">
                         <div class="details-grid">
                             <div class="details-section description">
-                                <h3><i class="fas fa-info-circle"></i> Description</h3>
-                                <p>This project is designed to analyze football (soccer) game footage using computer vision and machine learning techniques. It tracks players and the ball, assigns teams to players, and identifies which team has possession of the ball at any given time. The output is an annotated video with visualizations of player movements, team assignments, and ball possession.</p>
+                                <h3><i class="fas fa-info-circle"></i> <span data-en="Description" data-fr="Description">Description</span></h3>
+                                <p data-en="This project is designed to analyze football (soccer) game footage using computer vision and machine learning techniques. It tracks players and the ball, assigns teams to players, and identifies which team has possession of the ball at any given time. The output is an annotated video with visualizations of player movements, team assignments, and ball possession." data-fr="Ce projet est conçu pour analyser les séquences de matchs de football en utilisant des techniques de vision par ordinateur et d'apprentissage automatique. Il suit les joueurs et le ballon, attribue des équipes aux joueurs et identifie quelle équipe a la possession du ballon à tout moment. Le résultat est une vidéo annotée avec des visualisations des mouvements des joueurs, des attributions d'équipe et de la possession du ballon.">This project is designed to analyze football (soccer) game footage using computer vision and machine learning techniques. It tracks players and the ball, assigns teams to players, and identifies which team has possession of the ball at any given time. The output is an annotated video with visualizations of player movements, team assignments, and ball possession.</p>
                             </div>
                         </div>
                     </div>
@@ -115,7 +118,8 @@
                                 <img src="images/photo7.png" alt="Supervisor Management App" class="project-image">
                             </div>
                             <div class="project-intro">
-                                <h2 class="project-title">Spring Boot Web Application for Efficient Supervisor Management at RADEM Agencies
+                                <h2 class="project-title" data-en="Spring Boot Web Application for Efficient Supervisor Management at RADEM Agencies" data-fr="Application Web Spring Boot pour la Gestion Efficace des Superviseurs des Agences RADEM">
+                                    Spring Boot Web Application for Efficient Supervisor Management at RADEM Agencies
                                     <a href="https://github.com/Yasouimo/SupEncaisseurs" class="github-link" target="_blank">
                                         <i class="fab fa-github"></i>
                                     </a>
@@ -125,7 +129,7 @@
                                 </span>
                                 <span class="project-date">
                                     <i class="fas fa-calendar-alt"></i>
-                                    <span class="date-range">August 2024 - September 2024</span>
+                                    <span class="date-range" data-en="August 2024 - September 2024" data-fr="Août 2024 - Septembre 2024">August 2024 - September 2024</span>
                                 </span>
                                 <span class="company-name">RADEM</span>
                             </div>
@@ -137,8 +141,8 @@
                     <div class="project-details">
                         <div class="details-grid">
                             <div class="details-section description">
-                                <h3><i class="fas fa-info-circle"></i> Description</h3>
-                                <p>Developed a Spring Boot web application to streamline supervisor management across RADEM agencies. Implemented features for efficient tracking, reporting, and administration of supervisors. Ensured scalability, security, and maintainability with Spring Boot, while creating a responsive UI using HTML, CSS, and JavaScript.</p>
+                                <h3><i class="fas fa-info-circle"></i> <span data-en="Description" data-fr="Description">Description</span></h3>
+                                <p data-en="Developed a Spring Boot web application to streamline supervisor management across RADEM agencies. Implemented features for efficient tracking, reporting, and administration of supervisors. Ensured scalability, security, and maintainability with Spring Boot, while creating a responsive UI using HTML, CSS, and JavaScript." data-fr="Développé une application web Spring Boot pour rationaliser la gestion des superviseurs dans les agences RADEM. Implémenté des fonctionnalités pour le suivi efficace, la génération de rapports et l'administration des superviseurs. Assuré l'évolutivité, la sécurité et la maintenabilité avec Spring Boot, tout en créant une interface utilisateur responsive en utilisant HTML, CSS et JavaScript.">Developed a Spring Boot web application to streamline supervisor management across RADEM agencies. Implemented features for efficient tracking, reporting, and administration of supervisors. Ensured scalability, security, and maintainability with Spring Boot, while creating a responsive UI using HTML, CSS, and JavaScript.</p>
                             </div>
                         </div>
                     </div>
@@ -152,7 +156,8 @@
                                 <img src="images/photo10.jpg" alt="BCG Data Science Job Simulation" class="project-image">
                             </div>
                             <div class="project-intro">
-                                <h2 class="project-title">BCG Data Science Job Simulation
+                                <h2 class="project-title" data-en="BCG Data Science Job Simulation" data-fr="Simulation de Poste en Science des Données BCG">
+                                    BCG Data Science Job Simulation
                                 </h2>
                                 <span class="project-technologies">
                                     <i class="fas fa-tools"></i>
@@ -160,7 +165,7 @@
                                 </span>
                                 <span class="project-date">
                                     <i class="fas fa-calendar-alt"></i>
-                                    <span class="date-range">January 2025 - March 2025</span>
+                                    <span class="date-range" data-en="January 2025 - March 2025" data-fr="Janvier 2025 - Mars 2025">January 2025 - March 2025</span>
                                 </span>
                                 <span class="company-name">Forage</span>
                             </div>
@@ -172,8 +177,8 @@
                     <div class="project-details">
                         <div class="details-grid">
                             <div class="details-section description">
-                                <h3><i class="fas fa-info-circle"></i> Description</h3>
-                                <p>Completed a customer churn analysis simulation for XYZ Analytics, demonstrating advanced data analytics skills, identifying essential client data, and outlining a strategic investigation approach. Conducted efficient data analysis using Python, including Pandas and NumPy. Employed data visualization techniques for insightful trend interpretation. Engineered and optimized a random forest model, achieving an 85% accuracy rate in predicting customer churn. Delivered a concise executive summary for the Associate Director, providing actionable insights for informed decision-making based on the analysis.</p>
+                                <h3><i class="fas fa-info-circle"></i> <span data-en="Description" data-fr="Description">Description</span></h3>
+                                <p data-en="Completed a customer churn analysis simulation for XYZ Analytics, demonstrating advanced data analytics skills, identifying essential client data, and outlining a strategic investigation approach. Conducted efficient data analysis using Python, including Pandas and NumPy. Employed data visualization techniques for insightful trend interpretation. Engineered and optimized a random forest model, achieving an 85% accuracy rate in predicting customer churn. Delivered a concise executive summary for the Associate Director, providing actionable insights for informed decision-making based on the analysis." data-fr="Réalisé une simulation d'analyse de désabonnement clients pour XYZ Analytics, démontrant des compétences avancées en analyse de données, identifiant les données client essentielles et définissant une approche d'investigation stratégique. Effectué une analyse de données efficace en utilisant Python, notamment Pandas et NumPy. Employé des techniques de visualisation de données pour une interprétation perspicace des tendances. Conçu et optimisé un modèle de forêt aléatoire, atteignant un taux de précision de 85% dans la prédiction du désabonnement des clients. Livré un résumé exécutif concis au Directeur Associé, fournissant des informations exploitables pour une prise de décision éclairée basée sur l'analyse.">Completed a customer churn analysis simulation for XYZ Analytics, demonstrating advanced data analytics skills, identifying essential client data, and outlining a strategic investigation approach. Conducted efficient data analysis using Python, including Pandas and NumPy. Employed data visualization techniques for insightful trend interpretation. Engineered and optimized a random forest model, achieving an 85% accuracy rate in predicting customer churn. Delivered a concise executive summary for the Associate Director, providing actionable insights for informed decision-making based on the analysis.</p>
                             </div>
                         </div>
                     </div>
@@ -187,14 +192,14 @@
                                 <img src="images/photo6.png" alt="Portfolio" class="project-image">
                             </div>
                             <div class="project-intro">
-                                <h2 class="project-title">Portfolio</h2>
+                                <h2 class="project-title" data-en="Portfolio" data-fr="Portfolio">Portfolio</h2>
                                 <span class="project-technologies">
                                     <i class="fas fa-tools"></i>
                                     HTML, CSS, JavaScript, NodeJs
                                 </span>
                                 <span class="project-date">
                                     <i class="fas fa-calendar-alt"></i>
-                                    <span class="date-range">November 2024 - February 2025</span>
+                                    <span class="date-range" data-en="November 2024 - February 2025" data-fr="Novembre 2024 - Février 2025">November 2024 - February 2025</span>
                                 </span>
                             </div>
                         </div>
@@ -205,8 +210,8 @@
                     <div class="project-details">
                         <div class="details-grid">
                             <div class="details-section description">
-                                <h3><i class="fas fa-info-circle"></i> Description</h3>
-                                <p>This portfolio showcases my projects, skills, and certifications. It is designed to provide a clean and modern user experience, with responsive design and smooth animations. The portfolio is built using HTML, CSS, and JavaScript, and it serves as a central hub for my professional work.</p>
+                                <h3><i class="fas fa-info-circle"></i> <span data-en="Description" data-fr="Description">Description</span></h3>
+                                <p data-en="This portfolio showcases my projects, skills, and certifications. It is designed to provide a clean and modern user experience, with responsive design and smooth animations. The portfolio is built using HTML, CSS, and JavaScript, and it serves as a central hub for my professional work." data-fr="Ce portfolio présente mes projets, compétences et certifications. Il est conçu pour offrir une expérience utilisateur épurée et moderne, avec un design responsive et des animations fluides. Le portfolio est construit avec HTML, CSS et JavaScript, et sert de hub central pour mon travail professionnel.">This portfolio showcases my projects, skills, and certifications. It is designed to provide a clean and modern user experience, with responsive design and smooth animations. The portfolio is built using HTML, CSS, and JavaScript, and it serves as a central hub for my professional work.</p>
                             </div>
                         </div>
                     </div>
@@ -223,7 +228,17 @@
         </button>
     </div>
 
+    <!-- Language Switcher -->
+    <footer>
+        <div class="language-switcher">
+            <button id="lang-en" class="lang-btn active">EN</button>
+            <span class="lang-separator">|</span>
+            <button id="lang-fr" class="lang-btn">FR</button>
+        </div>
+    </footer>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="scripts/language-switcher.js"></script>
     <script src="scripts/projects.js"></script>
     <script src="scripts/script.js"></script>
 </body>
