@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/navbar.css">
     <link rel="stylesheet" href="styles/certifications.css">
+    <link rel="stylesheet" href="styles/language-switcher.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
@@ -15,11 +16,11 @@
         <div class="navbar">
             <a href="index.html" class="nav-brand">BY</a>
         <ul class="nav-links">
-            <li><a href="index.html" class="nav-link">Home</a></li>
-            <li><a href="projects.html" class="nav-link">Projects</a></li>
-            <li><a href="Certifications.html" class="nav-link">Certifications</a></li>
-            <li><a href="Aboutme.html" class="nav-link active">About Me</a></li>
-            <li><a href="Contact.html" class="nav-link">Contact</a></li>
+            <li><a href="index.html" class="nav-link" data-en="Home" data-fr="Accueil">Home</a></li>
+            <li><a href="projects.html" class="nav-link" data-en="Projects" data-fr="Projets">Projects</a></li>
+            <li><a href="Certifications.html" class="nav-link" data-en="Certifications" data-fr="Certifications">Certifications</a></li>
+            <li><a href="Aboutme.html" class="nav-link active" data-en="About Me" data-fr="À Propos">About Me</a></li>
+            <li><a href="Contact.html" class="nav-link" data-en="Contact" data-fr="Contact">Contact</a></li>
         </ul>
         <div class="nav-toggle">
             <span></span>
@@ -29,7 +30,7 @@
     </nav>
 
     <div class="page-container">
-        <h1 class="page-title" data-aos="fade-down">My Certifications</h1>
+        <h1 class="page-title" data-aos="fade-down" data-en="My Certifications" data-fr="Mes Certifications">My Certifications</h1>
         
         <div class="certifications-container">
             <div class="certificates-track">
@@ -41,7 +42,7 @@
                                 <img src="images/photo.png" alt="Huawei AI Certification" class="certification-image">
                             </div>
                             <div class="certification-intro">
-                                <h2 class="certification-title">Artificial Intelligence Technology and Applications</h2>
+                                <h2 class="certification-title" data-en="Artificial Intelligence Technology and Applications" data-fr="Technologie et Applications d'Intelligence Artificielle">Artificial Intelligence Technology and Applications</h2>
                                 <span class="certification-provider"><i class="fas fa-certificate"></i> Huawei Talent</span>
                             </div>
                         </div>
@@ -52,24 +53,24 @@
                     <div class="certification-details">
                         <div class="details-grid">
                             <div class="details-section description">
-                                <h3><i class="fas fa-info-circle"></i> Description</h3>
-                                <p>Introduction to AI, Machine Learning, and Deep Learning concepts with hands-on applications.</p>
+                                <h3 data-en="Description" data-fr="Description"><i class="fas fa-info-circle"></i> Description</h3>
+                                <p data-en="Introduction to AI, Machine Learning, and Deep Learning concepts with hands-on applications." data-fr="Introduction à l'IA, à l'apprentissage automatique et aux concepts d'apprentissage profond avec des applications pratiques.">Introduction to AI, Machine Learning, and Deep Learning concepts with hands-on applications.</p>
                             </div>
                             <div class="details-section contents">
-                                <h3><i class="fas fa-list-ul"></i> Course Contents</h3>
+                                <h3 data-en="Course Contents" data-fr="Contenu du Cours"><i class="fas fa-list-ul"></i> Course Contents</h3>
                                 <ul>
-                                    <li>AI Overview & Python Basics</li>
-                                    <li>Machine Learning & Deep Learning</li>
-                                    <li>AI Development Frameworks</li>
-                                    <li>Quantum Computing Basics</li>
+                                    <li data-en="AI Overview & Python Basics" data-fr="Aperçu de l'IA & Bases de Python">AI Overview & Python Basics</li>
+                                    <li data-en="Machine Learning & Deep Learning" data-fr="Apprentissage Automatique & Apprentissage Profond">Machine Learning & Deep Learning</li>
+                                    <li data-en="AI Development Frameworks" data-fr="Frameworks de Développement IA">AI Development Frameworks</li>
+                                    <li data-en="Quantum Computing Basics" data-fr="Bases de l'Informatique Quantique">Quantum Computing Basics</li>
                                 </ul>
                             </div>
                             <div class="details-section skills">
-                                <h3><i class="fas fa-tools"></i> Skills Gained</h3>
+                                <h3 data-en="Skills Gained" data-fr="Compétences Acquises"><i class="fas fa-tools"></i> Skills Gained</h3>
                                 <ul>
-                                    <li>Machine Learning</li>
-                                    <li>Deep Learning</li>
-                                    <li>Python Programming</li>
+                                    <li data-en="Machine Learning" data-fr="Apprentissage Automatique">Machine Learning</li>
+                                    <li data-en="Deep Learning" data-fr="Apprentissage Profond">Deep Learning</li>
+                                    <li data-en="Python Programming" data-fr="Programmation Python">Python Programming</li>
                                 </ul>
                             </div>
                         </div>
@@ -84,7 +85,7 @@
                                 <img src="images/photo2.jpg" alt="Microsoft Generative AI Certification" class="certification-image">
                             </div>
                             <div class="certification-intro">
-                                <h2 class="certification-title">Career Essentials in Generative AI By Microsoft And LinkedIn</h2>
+                                <h2 class="certification-title" data-en="Career Essentials in Generative AI By Microsoft And LinkedIn" data-fr="Essentiels de Carrière en IA Générative Par Microsoft et LinkedIn">Career Essentials in Generative AI By Microsoft And LinkedIn</h2>
                                 <span class="certification-provider"><i class="fas fa-certificate"></i> Microsoft&LinkedIn Learning</span>
                             </div>
                         </div>
@@ -95,24 +96,24 @@
                     <div class="certification-details">
                         <div class="details-grid">
                             <div class="details-section description">
-                                <h3><i class="fas fa-info-circle"></i> Description</h3>
-                                <p>Comprehensive course on Generative AI, covering fundamental concepts, practical applications, and ethical considerations.</p>
+                                <h3 data-en="Description" data-fr="Description"><i class="fas fa-info-circle"></i> Description</h3>
+                                <p data-en="Comprehensive course on Generative AI, covering fundamental concepts, practical applications, and ethical considerations." data-fr="Cours complet sur l'IA générative, couvrant les concepts fondamentaux, les applications pratiques et les considérations éthiques.">Comprehensive course on Generative AI, covering fundamental concepts, practical applications, and ethical considerations.</p>
                             </div>
                             <div class="details-section contents">
-                                <h3><i class="fas fa-list-ul"></i> Course Contents</h3>
+                                <h3 data-en="Course Contents" data-fr="Contenu du Cours"><i class="fas fa-list-ul"></i> Course Contents</h3>
                                 <ul>
-                                    <li>Introduction to Generative AI</li>
-                                    <li>AI Models & Neural Networks</li>
-                                    <li>Ethics & Responsible AI</li>
-                                    <li>Hands-on AI Applications</li>
+                                    <li data-en="Introduction to Generative AI" data-fr="Introduction à l'IA Générative">Introduction to Generative AI</li>
+                                    <li data-en="AI Models & Neural Networks" data-fr="Modèles d'IA & Réseaux Neuronaux">AI Models & Neural Networks</li>
+                                    <li data-en="Ethics & Responsible AI" data-fr="Éthique & IA Responsable">Ethics & Responsible AI</li>
+                                    <li data-en="Hands-on AI Applications" data-fr="Applications Pratiques d'IA">Hands-on AI Applications</li>
                                 </ul>
                             </div>
                             <div class="details-section skills">
-                                <h3><i class="fas fa-tools"></i> Skills Gained</h3>
+                                <h3 data-en="Skills Gained" data-fr="Compétences Acquises"><i class="fas fa-tools"></i> Skills Gained</h3>
                                 <ul>
-                                    <li>Generative AI</li>
-                                    <li>Machine Learning Fundamentals</li>
-                                    <li>AI Ethics & Policy</li>
+                                    <li data-en="Generative AI" data-fr="IA Générative">Generative AI</li>
+                                    <li data-en="Machine Learning Fundamentals" data-fr="Fondamentaux de l'Apprentissage Automatique">Machine Learning Fundamentals</li>
+                                    <li data-en="AI Ethics & Policy" data-fr="Éthique & Politique d'IA">AI Ethics & Policy</li>
                                 </ul>
                             </div>
                         </div>
@@ -127,7 +128,7 @@
                                 <img src="images/photo12.jpg" alt="Introduction to Docker Certification" class="certification-image">
                             </div>
                             <div class="certification-intro">
-                                <h2 class="certification-title">Introduction to Docker</h2>
+                                <h2 class="certification-title" data-en="Introduction to Docker" data-fr="Introduction à Docker">Introduction to Docker</h2>
                                 <span class="certification-provider"><i class="fas fa-certificate"></i> DataScientist.fr</span>
                             </div>
                         </div>
@@ -138,25 +139,25 @@
                     <div class="certification-details">
                         <div class="details-grid">
                             <div class="details-section description">
-                                <h3><i class="fas fa-info-circle"></i> Description</h3>
-                                <p>Comprehensive introduction to Docker, covering containerization concepts, image creation, and application deployment using Docker.</p>
+                                <h3 data-en="Description" data-fr="Description"><i class="fas fa-info-circle"></i> Description</h3>
+                                <p data-en="Comprehensive introduction to Docker, covering containerization concepts, image creation, and application deployment using Docker." data-fr="Introduction complète à Docker, couvrant les concepts de conteneurisation, la création d'images et le déploiement d'applications à l'aide de Docker.">Comprehensive introduction to Docker, covering containerization concepts, image creation, and application deployment using Docker.</p>
                             </div>
                             <div class="details-section contents">
-                                <h3><i class="fas fa-list-ul"></i> Course Contents</h3>
+                                <h3 data-en="Course Contents" data-fr="Contenu du Cours"><i class="fas fa-list-ul"></i> Course Contents</h3>
                                 <ul>
-                                    <li>Install Docker and create images and containers</li>
-                                    <li>Manage containers and Docker registries</li>
-                                    <li>Deploy applications with Docker</li>
-                                    <li>Containerize and deploy a Flask Python application</li>
+                                    <li data-en="Install Docker and create images and containers" data-fr="Installer Docker et créer des images et des conteneurs">Install Docker and create images and containers</li>
+                                    <li data-en="Manage containers and Docker registries" data-fr="Gérer les conteneurs et les registres Docker">Manage containers and Docker registries</li>
+                                    <li data-en="Deploy applications with Docker" data-fr="Déployer des applications avec Docker">Deploy applications with Docker</li>
+                                    <li data-en="Containerize and deploy a Flask Python application" data-fr="Conteneuriser et déployer une application Python Flask">Containerize and deploy a Flask Python application</li>
                                 </ul>
                             </div>
                             <div class="details-section skills">
-                                <h3><i class="fas fa-tools"></i> Skills Gained</h3>
+                                <h3 data-en="Skills Gained" data-fr="Compétences Acquises"><i class="fas fa-tools"></i> Skills Gained</h3>
                                 <ul>
-                                    <li>Docker Containerization</li>
-                                    <li>Image Creation</li>
-                                    <li>Container Management</li>
-                                    <li>Application Deployment</li>
+                                    <li data-en="Docker Containerization" data-fr="Conteneurisation Docker">Docker Containerization</li>
+                                    <li data-en="Image Creation" data-fr="Création d'Images">Image Creation</li>
+                                    <li data-en="Container Management" data-fr="Gestion de Conteneurs">Container Management</li>
+                                    <li data-en="Application Deployment" data-fr="Déploiement d'Applications">Application Deployment</li>
                                 </ul>
                             </div>
                         </div>
@@ -171,7 +172,7 @@
                                 <img src="images/photo4.jpg" alt="Udemy Quality Tools Certification" class="certification-image">
                             </div>
                             <div class="certification-intro">
-                                <h2 class="certification-title">Mastering The Seven Essential Quality Improvement Tools</h2>
+                                <h2 class="certification-title" data-en="Mastering The Seven Essential Quality Improvement Tools" data-fr="Maîtriser Les Sept Outils Essentiels d'Amélioration de la Qualité">Mastering The Seven Essential Quality Improvement Tools</h2>
                                 <span class="certification-provider"><i class="fas fa-certificate"></i> Udemy</span>
                             </div>
                         </div>
@@ -182,24 +183,24 @@
                     <div class="certification-details">
                         <div class="details-grid">
                             <div class="details-section description">
-                                <h3><i class="fas fa-info-circle"></i> Description</h3>
-                                <p>Comprehensive training on essential quality management tools to improve processes and ensure organizational efficiency.</p>
+                                <h3 data-en="Description" data-fr="Description"><i class="fas fa-info-circle"></i> Description</h3>
+                                <p data-en="Comprehensive training on essential quality management tools to improve processes and ensure organizational efficiency." data-fr="Formation complète sur les outils essentiels de gestion de la qualité pour améliorer les processus et assurer l'efficacité organisationnelle.">Comprehensive training on essential quality management tools to improve processes and ensure organizational efficiency.</p>
                             </div>
                             <div class="details-section contents">
-                                <h3><i class="fas fa-list-ul"></i> Course Contents</h3>
+                                <h3 data-en="Course Contents" data-fr="Contenu du Cours"><i class="fas fa-list-ul"></i> Course Contents</h3>
                                 <ul>
-                                    <li>Check Sheets & Flowcharts</li>
-                                    <li>Histograms & Pareto Charts</li>
-                                    <li>Run Charts & Scatter Diagrams</li>
-                                    <li>Cause-and-Effect Analysis</li>
+                                    <li data-en="Check Sheets & Flowcharts" data-fr="Fiches de Contrôle & Organigrammes">Check Sheets & Flowcharts</li>
+                                    <li data-en="Histograms & Pareto Charts" data-fr="Histogrammes & Diagrammes de Pareto">Histograms & Pareto Charts</li>
+                                    <li data-en="Run Charts & Scatter Diagrams" data-fr="Graphiques d'Exécution & Diagrammes de Dispersion">Run Charts & Scatter Diagrams</li>
+                                    <li data-en="Cause-and-Effect Analysis" data-fr="Analyse Cause-Effet">Cause-and-Effect Analysis</li>
                                 </ul>
                             </div>
                             <div class="details-section skills">
-                                <h3><i class="fas fa-tools"></i> Skills Gained</h3>
+                                <h3 data-en="Skills Gained" data-fr="Compétences Acquises"><i class="fas fa-tools"></i> Skills Gained</h3>
                                 <ul>
-                                    <li>Quality Management</li>
-                                    <li>Process Improvement</li>
-                                    <li>Data Visualization</li>
+                                    <li data-en="Quality Management" data-fr="Gestion de la Qualité">Quality Management</li>
+                                    <li data-en="Process Improvement" data-fr="Amélioration des Processus">Process Improvement</li>
+                                    <li data-en="Data Visualization" data-fr="Visualisation des Données">Data Visualization</li>
                                 </ul>
                             </div>
                         </div>
@@ -214,7 +215,7 @@
                                 <img src="images/photo8.jfif" alt="LinkedIn Learning Project Management Certification" class="certification-image">
                             </div>
                             <div class="certification-intro">
-                                <h2 class="certification-title">Project Management Foundations</h2>
+                                <h2 class="certification-title" data-en="Project Management Foundations" data-fr="Fondements de la Gestion de Projet">Project Management Foundations</h2>
                                 <span class="certification-provider"><i class="fas fa-certificate"></i> LinkedIn Learning</span>
                             </div>
                         </div>
@@ -225,24 +226,24 @@
                     <div class="certification-details">
                         <div class="details-grid">
                             <div class="details-section description">
-                                <h3><i class="fas fa-info-circle"></i> Description</h3>
-                                <p>Learn the fundamentals of project management, including planning, execution, and monitoring, to deliver projects successfully.</p>
+                                <h3 data-en="Description" data-fr="Description"><i class="fas fa-info-circle"></i> Description</h3>
+                                <p data-en="Learn the fundamentals of project management, including planning, execution, and monitoring, to deliver projects successfully." data-fr="Apprenez les fondamentaux de la gestion de projet, y compris la planification, l'exécution et le suivi, pour livrer des projets avec succès.">Learn the fundamentals of project management, including planning, execution, and monitoring, to deliver projects successfully.</p>
                             </div>
                             <div class="details-section contents">
-                                <h3><i class="fas fa-list-ul"></i> Course Contents</h3>
+                                <h3 data-en="Course Contents" data-fr="Contenu du Cours"><i class="fas fa-list-ul"></i> Course Contents</h3>
                                 <ul>
-                                    <li>Project Planning & Scope Definition</li>
-                                    <li>Resource Allocation & Scheduling</li>
-                                    <li>Risk Management & Mitigation</li>
-                                    <li>Project Monitoring & Closure</li>
+                                    <li data-en="Project Planning & Scope Definition" data-fr="Planification de Projet & Définition de la Portée">Project Planning & Scope Definition</li>
+                                    <li data-en="Resource Allocation & Scheduling" data-fr="Allocation des Ressources & Planification">Resource Allocation & Scheduling</li>
+                                    <li data-en="Risk Management & Mitigation" data-fr="Gestion des Risques & Atténuation">Risk Management & Mitigation</li>
+                                    <li data-en="Project Monitoring & Closure" data-fr="Suivi de Projet & Clôture">Project Monitoring & Closure</li>
                                 </ul>
                             </div>
                             <div class="details-section skills">
-                                <h3><i class="fas fa-tools"></i> Skills Gained</h3>
+                                <h3 data-en="Skills Gained" data-fr="Compétences Acquises"><i class="fas fa-tools"></i> Skills Gained</h3>
                                 <ul>
-                                    <li>Project Planning</li>
-                                    <li>Risk Management</li>
-                                    <li>Team Collaboration</li>
+                                    <li data-en="Project Planning" data-fr="Planification de Projet">Project Planning</li>
+                                    <li data-en="Risk Management" data-fr="Gestion des Risques">Risk Management</li>
+                                    <li data-en="Team Collaboration" data-fr="Collaboration d'Équipe">Team Collaboration</li>
                                 </ul>
                             </div>
                         </div>
@@ -257,7 +258,7 @@
                                 <img src="images/photo9.jfif" alt="Agile Fundamentals Certification" class="certification-image">
                             </div>
                             <div class="certification-intro">
-                                <h2 class="certification-title">Agile Fundamentals Certification</h2>
+                                <h2 class="certification-title" data-en="Agile Fundamentals Certification" data-fr="Certification des Fondamentaux Agile">Agile Fundamentals Certification</h2>
                                 <span class="certification-provider"><i class="fas fa-certificate"></i> Agile Enterprise Coach</span>
                             </div>
                         </div>
@@ -268,24 +269,24 @@
                     <div class="certification-details">
                         <div class="details-grid">
                             <div class="details-section description">
-                                <h3><i class="fas fa-info-circle"></i> Description</h3>
-                                <p>This certification deepens my understanding of Agile principles, which are the backbone of modern project management, promoting adaptability, collaboration, and continuous improvement.</p>
+                                <h3 data-en="Description" data-fr="Description"><i class="fas fa-info-circle"></i> Description</h3>
+                                <p data-en="This certification deepens my understanding of Agile principles, which are the backbone of modern project management, promoting adaptability, collaboration, and continuous improvement." data-fr="Cette certification approfondit ma compréhension des principes Agile, qui sont l'épine dorsale de la gestion de projet moderne, favorisant l'adaptabilité, la collaboration et l'amélioration continue.">This certification deepens my understanding of Agile principles, which are the backbone of modern project management, promoting adaptability, collaboration, and continuous improvement.</p>
                             </div>
                             <div class="details-section contents">
-                                <h3><i class="fas fa-list-ul"></i> Course Contents</h3>
+                                <h3 data-en="Course Contents" data-fr="Contenu du Cours"><i class="fas fa-list-ul"></i> Course Contents</h3>
                                 <ul>
-                                    <li>Agile Principles & Values</li>
-                                    <li>Scrum Framework</li>
-                                    <li>Sprint Planning & Execution</li>
-                                    <li>Continuous Improvement Techniques</li>
+                                    <li data-en="Agile Principles & Values" data-fr="Principes & Valeurs Agile">Agile Principles & Values</li>
+                                    <li data-en="Scrum Framework" data-fr="Cadre Scrum">Scrum Framework</li>
+                                    <li data-en="Sprint Planning & Execution" data-fr="Planification & Exécution des Sprints">Sprint Planning & Execution</li>
+                                    <li data-en="Continuous Improvement Techniques" data-fr="Techniques d'Amélioration Continue">Continuous Improvement Techniques</li>
                                 </ul>
                             </div>
                             <div class="details-section skills">
-                                <h3><i class="fas fa-tools"></i> Skills Gained</h3>
+                                <h3 data-en="Skills Gained" data-fr="Compétences Acquises"><i class="fas fa-tools"></i> Skills Gained</h3>
                                 <ul>
-                                    <li>Agile Methodology</li>
-                                    <li>Scrum Framework</li>
-                                    <li>Collaboration & Adaptability</li>
+                                    <li data-en="Agile Methodology" data-fr="Méthodologie Agile">Agile Methodology</li>
+                                    <li data-en="Scrum Framework" data-fr="Cadre Scrum">Scrum Framework</li>
+                                    <li data-en="Collaboration & Adaptability" data-fr="Collaboration & Adaptabilité">Collaboration & Adaptability</li>
                                 </ul>
                             </div>
                         </div>
@@ -300,7 +301,7 @@
                                 <img src="images/photo11.jpg" alt="DataCamp Data Scientist Certification" class="certification-image">
                             </div>
                             <div class="certification-intro">
-                                <h2 class="certification-title">Associate Data Scientist</h2>
+                                <h2 class="certification-title" data-en="Associate Data Scientist" data-fr="Data Scientist Associé">Associate Data Scientist</h2>
                                 <span class="certification-provider"><i class="fas fa-certificate"></i> DataCamp</span>
                             </div>
                         </div>
@@ -311,25 +312,25 @@
                     <div class="certification-details">
                         <div class="details-grid">
                             <div class="details-section description">
-                                <h3><i class="fas fa-info-circle"></i> Description</h3>
-                                <p>I've earned the Data Scientist Associate Certificate, gaining valuable skills and knowledge in data science fundamentals and practical applications.</p>
+                                <h3 data-en="Description" data-fr="Description"><i class="fas fa-info-circle"></i> Description</h3>
+                                <p data-en="I've earned the Data Scientist Associate Certificate, gaining valuable skills and knowledge in data science fundamentals and practical applications." data-fr="J'ai obtenu le certificat Data Scientist Associé, acquérant des compétences et des connaissances précieuses dans les fondamentaux de la science des données et les applications pratiques.">I've earned the Data Scientist Associate Certificate, gaining valuable skills and knowledge in data science fundamentals and practical applications.</p>
                             </div>
                             <div class="details-section contents">
-                                <h3><i class="fas fa-list-ul"></i> Course Contents</h3>
+                                <h3 data-en="Course Contents" data-fr="Contenu du Cours"><i class="fas fa-list-ul"></i> Course Contents</h3>
                                 <ul>
-                                    <li>Data Handling & Manipulation</li>
-                                    <li>Statistical Analysis & Testing</li>
-                                    <li>Data Visualization Techniques</li>
-                                    <li>Core Statistical Concepts</li>
+                                    <li data-en="Data Handling & Manipulation" data-fr="Gestion & Manipulation des Données">Data Handling & Manipulation</li>
+                                    <li data-en="Statistical Analysis & Testing" data-fr="Analyse Statistique & Tests">Statistical Analysis & Testing</li>
+                                    <li data-en="Data Visualization Techniques" data-fr="Techniques de Visualisation des Données">Data Visualization Techniques</li>
+                                    <li data-en="Core Statistical Concepts" data-fr="Concepts Statistiques Fondamentaux">Core Statistical Concepts</li>
                                 </ul>
                             </div>
                             <div class="details-section skills">
-                                <h3><i class="fas fa-tools"></i> Skills Gained</h3>
+                                <h3 data-en="Skills Gained" data-fr="Compétences Acquises"><i class="fas fa-tools"></i> Skills Gained</h3>
                                 <ul>
-                                    <li>Data Wrangling</li>
-                                    <li>Statistical Analysis</li>
-                                    <li>Data Visualization</li>
-                                    <li>Experimental Design</li>
+                                    <li data-en="Data Wrangling" data-fr="Préparation des Données">Data Wrangling</li>
+                                    <li data-en="Statistical Analysis" data-fr="Analyse Statistique">Statistical Analysis</li>
+                                    <li data-en="Data Visualization" data-fr="Visualisation des Données">Data Visualization</li>
+                                    <li data-en="Experimental Design" data-fr="Conception Expérimentale">Experimental Design</li>
                                 </ul>
                             </div>
                         </div>
@@ -347,6 +348,13 @@
         </button>
     </div>
 
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <button id="lang-en" class="lang-btn active">EN</button>
+        <span class="lang-separator">|</span>
+        <button id="lang-fr" class="lang-btn">FR</button>
+    </div>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
@@ -356,5 +364,6 @@
     </script>
     <script src="scripts/certifications.js"></script>
     <script src="scripts/script.js"></script>
+    <script src="scripts/language-switcher.js"></script>
 </body>
 </html>
