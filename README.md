@@ -15,7 +15,7 @@ Welcome to my personal portfolio! This project showcases my skills, projects, ce
 ## Technologies Used
 
 - **Frontend**: HTML, CSS, JavaScript
-- **Icons**: Font Awesome
+- **Icons**: Font Awesome,Bootstrap
 - **Animations**: AOS (Animate On Scroll)
-- **Deployment**: [Github](https://yasouimo.github.io/Portfolio/)
+- **Deployment**: [GithubPages](https://yasouimo.github.io/Portfolio/)
 
