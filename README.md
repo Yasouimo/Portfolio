@@ -19,3 +19,5 @@ Welcome to my personal portfolio! This project showcases my skills, projects, ce
 - **Animations**: AOS (Animate On Scroll)
 - **Deployment**: [GithubPages](https://yasouimo.github.io/Portfolio/)
 
+## Contact
+
