@@ -23,5 +23,5 @@ Welcome to my personal portfolio! This project showcases my skills, projects, ce
 
 - Project Creators : **Bellmir Yahya**
 - Github : [Bellmir Yahya](https://github.com/Yasouimo)
-- LinkedIn : [Bellmir Yahya](https://www.linkedin.com/in/yahya-bellmir-a54176284/) & [Chegdati Chouaib](https://www.linkedin.com/in/chouaib-chegdati-75a3a3302/)
+- LinkedIn : [Bellmir Yahya](https://www.linkedin.com/in/yahya-bellmir-a54176284/)
 
