@@ -22,5 +22,5 @@ Welcome to my personal portfolio! This project showcases my skills, projects, ce
 ## Contact
 
 - Project Creators : **Bellmir Yahya**
-- Github : [Bellmir Yahya](https://github.com/Yasouimo) & [Chegdati Chouaib](https://github.com/chouaibneuralnets)
+- Github : [Bellmir Yahya](https://github.com/Yasouimo)
 
