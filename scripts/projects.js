@@ -9,7 +9,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const track = document.querySelector('.projects-track');
     const cards = document.querySelectorAll('.project-card');
-    const cardWidth = cards[0].offsetWidth + 32; // Include gap
+    
+    // Function to get card width including gap based on screen size
+    function getCardWidth() {
+        const isMobile = window.innerWidth <= 768;
+        const gap = isMobile ? 16 : 32; // 1rem = 16px for mobile, 2rem = 32px for desktop
+        return cards[0].offsetWidth + gap;
+    }
 
     let isScrolling = false;
     let scrollTimeout;
@@ -20,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         scrollTimeout = setTimeout(() => {
             const currentScroll = track.scrollLeft;
+            const cardWidth = getCardWidth();
             const nearestIndex = Math.round(currentScroll / cardWidth);
             const snapPosition = nearestIndex * cardWidth;
 
@@ -29,14 +36,14 @@ document.addEventListener('DOMContentLoaded', function () {
                     behavior: 'smooth' 
                 });
             }
-        }, 150); // Slightly longer delay for better user experience
+        }, 150);
     });
 
     // Handle wheel scrolling
     track.addEventListener('wheel', (e) => {
         isScrolling = true;
         
-        const scrollAmount = e.deltaY * 0.5; // Reduce scroll sensitivity
+        const scrollAmount = e.deltaY * 0.5;
         track.scrollLeft += scrollAmount;
 
         clearTimeout(scrollTimeout);
@@ -80,7 +87,9 @@ function scrollToProject(index) {
     closeAllDetails(); // Always close details, even if the index is invalid
 
     if (index >= 0 && index < cards.length) {
-        const cardWidth = cards[0].offsetWidth + 32; // Include gap
+        const isMobile = window.innerWidth <= 768;
+        const gap = isMobile ? 16 : 32;
+        const cardWidth = cards[0].offsetWidth + gap;
         const scrollPosition = cardWidth * index;
         track.scrollTo({ 
             left: scrollPosition, 
@@ -93,7 +102,9 @@ function scrollToProject(index) {
 function getCurrentCardIndex() {
     const track = document.querySelector('.projects-track');
     const cards = document.querySelectorAll('.project-card');
-    const cardWidth = cards[0].offsetWidth + 32; // Include gap
+    const isMobile = window.innerWidth <= 768;
+    const gap = isMobile ? 16 : 32;
+    const cardWidth = cards[0].offsetWidth + gap;
     const currentScroll = track.scrollLeft;
     return Math.round(currentScroll / cardWidth);
 }

@@ -8,7 +8,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const track = document.querySelector('.certificates-track');
     const cards = document.querySelectorAll('.certification-card');
-    const cardWidth = cards[0].offsetWidth + 32; // Include gap
+    
+    // Function to get card width including gap based on screen size
+    function getCardWidth() {
+        const isMobile = window.innerWidth <= 768;
+        const gap = isMobile ? 16 : 32; // 1rem = 16px for mobile, 2rem = 32px for desktop
+        return cards[0].offsetWidth + gap;
+    }
 
     let isScrolling = false;
     let scrollTimeout;
@@ -19,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         scrollTimeout = setTimeout(() => {
             const currentScroll = track.scrollLeft;
+            const cardWidth = getCardWidth();
             const nearestIndex = Math.round(currentScroll / cardWidth);
             const snapPosition = nearestIndex * cardWidth;
 
@@ -28,14 +35,14 @@ document.addEventListener('DOMContentLoaded', function () {
                     behavior: 'smooth' 
                 });
             }
-        }, 150); // Slightly longer delay for better user experience
+        }, 150);
     });
 
     // Handle wheel scrolling
     track.addEventListener('wheel', (e) => {
         isScrolling = true;
         
-        const scrollAmount = e.deltaY * 0.5; // Reduce scroll sensitivity
+        const scrollAmount = e.deltaY * 0.5;
         track.scrollLeft += scrollAmount;
 
         clearTimeout(scrollTimeout);
@@ -64,10 +71,12 @@ function toggleDetails(element) {
 // Get current certificate index
 function getCurrentIndex() {
     const track = document.querySelector('.certificates-track');
-    const transform = track.style.transform;
-    const translateX = transform ? parseInt(transform.match(/-?\d+/)[0]) : 0;
-    const cardWidth = document.querySelector('.certification-card').offsetWidth + 32; // Including gap
-    return Math.abs(Math.round(translateX / cardWidth));
+    const cards = document.querySelectorAll('.certification-card');
+    const isMobile = window.innerWidth <= 768;
+    const gap = isMobile ? 16 : 32;
+    const cardWidth = cards[0].offsetWidth + gap;
+    const currentScroll = track.scrollLeft;
+    return Math.round(currentScroll / cardWidth);
 }
 
 // Scroll to specific certificate
@@ -75,19 +84,17 @@ function scrollToCertificate(index) {
     const track = document.querySelector('.certificates-track');
     const cards = document.querySelectorAll('.certification-card');
     
-    // Close all open details
-    const allHeaders = document.querySelectorAll('.certification-header.active');
-    allHeaders.forEach(header => {
-        header.classList.remove('active');
-        const details = header.nextElementSibling;
-        details.style.height = '0';
-    });
+    closeAllDetails(); // Always close details, even if the index is invalid
 
     if (index >= 0 && index < cards.length) {
-        const cardWidth = cards[0].offsetWidth + 32; // Including gap
-        const newTransformValue = -cardWidth * index; // Move by one card width
-        track.style.transition = 'transform 0.3s ease'; // Add transition for smooth scrolling
-        track.style.transform = `translateX(${newTransformValue}px)`;
+        const isMobile = window.innerWidth <= 768;
+        const gap = isMobile ? 16 : 32;
+        const cardWidth = cards[0].offsetWidth + gap;
+        const scrollPosition = cardWidth * index;
+        track.scrollTo({ 
+            left: scrollPosition, 
+            behavior: 'smooth' 
+        });
     }
 }
 
@@ -106,17 +113,14 @@ function closeAllDetails() {
 // Event listeners for prev/next buttons
 document.querySelector('.prev-certificate').addEventListener('click', function() {
     const currentIndex = getCurrentIndex();
-    if (currentIndex > 0) {
-        scrollToCertificate(currentIndex - 1);
-    }
+    const prevIndex = currentIndex - 1;
+    scrollToCertificate(prevIndex);
 });
 
 document.querySelector('.next-certificate').addEventListener('click', function() {
     const currentIndex = getCurrentIndex();
-    const totalCards = document.querySelectorAll('.certification-card').length;
-    if (currentIndex < totalCards - 1) {
-        scrollToCertificate(currentIndex + 1);
-    }
+    const nextIndex = currentIndex + 1;
+    scrollToCertificate(nextIndex);
 });
 
 // Close card details when clicking outside
