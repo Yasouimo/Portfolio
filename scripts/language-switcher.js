@@ -98,5 +98,23 @@ document.addEventListener('DOMContentLoaded', function() {
         skill.textContent = skill.dataset[lang];
       }
     });
+    
+    // Update animated subtitle if on index page
+    updateAnimatedSubtitle(lang);
+  }
+  
+  // Function to update animated subtitle
+  function updateAnimatedSubtitle(lang) {
+    const subtitleElement = document.getElementById('animated-subtitle');
+    if (subtitleElement) {
+      const occupation = lang === 'en' ? 'AI & Data Science Engineer' : 'Ingénieur en IA & Science des Données';
+      
+      // Remove show class, update text, then re-show with animation
+      subtitleElement.classList.remove('show');
+      setTimeout(() => {
+        subtitleElement.textContent = occupation;
+        subtitleElement.classList.add('show');
+      }, 300);
+    }
   }
 });

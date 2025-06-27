@@ -1,9 +1,59 @@
 console.log("Portfolio loaded successfully!");
 
+// Typewriter effect function
+function typeWriter(element, text, speed = 100, callback = null) {
+    let i = 0;
+    element.innerHTML = '';
+    element.classList.add('typewriter');
+    
+    function type() {
+        if (i < text.length) {
+            element.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(type, speed);
+        } else {
+            // Remove the typewriter cursor after completion
+            setTimeout(() => {
+                element.classList.remove('typewriter');
+                if (callback) callback();
+            }, 500);
+        }
+    }
+    type();
+}
+
+// Initialize text animations
+function initTextAnimations() {
+    const nameElement = document.getElementById('animated-name');
+    const subtitleElement = document.getElementById('animated-subtitle');
+    
+    if (nameElement && subtitleElement) {
+        // Get current language
+        const isEnglish = !document.documentElement.classList.contains('fr');
+        
+        const name = 'Bellmir Yahya';
+        const occupation = isEnglish ? 'AI & Data Science Engineer' : 'Ingénieur en IA & Science des Données';
+        
+        // Start with name animation
+        setTimeout(() => {
+            typeWriter(nameElement, name, 80, () => {
+                // After name is complete, show subtitle with smooth animation
+                subtitleElement.textContent = occupation;
+                setTimeout(() => {
+                    subtitleElement.classList.add('show');
+                }, 200);
+            });
+        }, 500); // Small delay before starting
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     const navToggle = document.querySelector('.nav-toggle');
     const navLinks = document.querySelector('.nav-links');
     const body = document.body;
+
+    // Initialize text animations
+    initTextAnimations();
 
     if (navToggle && navLinks) {
         navToggle.addEventListener('click', function() {
