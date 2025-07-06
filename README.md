@@ -1,4 +1,4 @@
-# My Portfolio 
+# My Portfolio  
 
 Welcome to my personal portfolio! This project showcases my skills, projects, certifications, and education. It is designed to provide a clean and modern user experience, with responsive design and smooth animations.    
 
