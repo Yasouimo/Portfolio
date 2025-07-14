@@ -1,5 +1,5 @@
 # Personal Portfolio Website
-
+ 
 A modern, responsive personal portfolio website showcasing my skills, projects, certifications, and professional experience. Built with clean design principles and smooth animations to provide an engaging user experience.
 
 ![Portfolio Preview](https://github.com/user-attachments/assets/8dc3665c-681c-4875-9c69-80967801ad52)
