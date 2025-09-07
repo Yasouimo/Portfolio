@@ -312,3 +312,372 @@
         right: 0.1rem;
     }
 }
+
+/* New Styles for Page Toggle and Company Section */
+.page-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    margin-bottom: 2rem;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 8px;
+    width: fit-content;
+    margin: 0 auto 2rem auto;
+}
+
+.toggle-btn {
+    padding: 12px 30px;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.toggle-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.toggle-btn.active {
+    background: var(--primary-color);
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+.company-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.company-logo-wrapper {
+    width: 80px;
+    height: 80px;
+    border-radius: 15px;
+    overflow: hidden;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.company-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 8px;
+}
+
+.company-info {
+    flex: 1;
+}
+
+.company-name {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.company-tagline {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.company-description {
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+.experience-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.internship-duration,
+.internship-role,
+.location {
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    font-size: 0.95rem;
+}
+
+.internship-duration i,
+.internship-role i,
+.location i {
+    margin-right: 10px;
+    color: var(--primary-color);
+    width: 18px;
+    text-align: center;
+}
+
+.tech-stack,
+.achievements {
+    margin-top: 25px;
+}
+
+.tech-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.tech-badge {
+    background: linear-gradient(135deg, var(--primary-color), #0056b3);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+    transition: transform 0.2s ease;
+}
+
+.tech-badge:hover {
+    transform: translateY(-2px);
+}
+
+.achievements ul {
+    margin-top: 12px;
+    padding-left: 25px;
+}
+
+.achievements li {
+    margin-bottom: 10px;
+    line-height: 1.7;
+    position: relative;
+}
+
+.achievements li::marker {
+    color: var(--primary-color);
+}
+
+.github-section {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.github-section .github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    background: linear-gradient(135deg, #333, #555);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.github-section .github-link:hover {
+    background: linear-gradient(135deg, #555, #777);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.experience-card .company-section {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.experience-card .company-logo-wrapper.large-logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border: 3px solid var(--primary-color);
+    flex-shrink: 0;
+}
+
+.experience-card .company-logo {
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+    padding: 8px;
+}
+
+.experience-card .company-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.company-name {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.company-tagline {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.company-description {
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+.experience-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.internship-duration,
+.internship-role,
+.location {
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    font-size: 0.95rem;
+}
+
+.internship-duration i,
+.internship-role i,
+.location i {
+    margin-right: 10px;
+    color: var(--primary-color);
+    width: 18px;
+    text-align: center;
+}
+
+.tech-stack,
+.achievements {
+    margin-top: 25px;
+}
+
+.tech-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.tech-badge {
+    background: linear-gradient(135deg, var(--primary-color), #0056b3);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+    transition: transform 0.2s ease;
+}
+
+.tech-badge:hover {
+    transform: translateY(-2px);
+}
+
+.achievements ul {
+    margin-top: 12px;
+    padding-left: 25px;
+}
+
+.achievements li {
+    margin-bottom: 10px;
+    line-height: 1.7;
+    position: relative;
+}
+
+.achievements li::marker {
+    color: var(--primary-color);
+}
+
+.github-section {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.github-section .github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    background: linear-gradient(135deg, #333, #555);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.github-section .github-link:hover {
+    background: linear-gradient(135deg, #555, #777);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Add this new CSS for experiences layout */
+
+.experiences-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 1rem;
+}
+
+.experiences-container .project-card {
+    width: 100%;
+    flex: none;
+}
+
+/* Override the projects track layout for experiences */
+.experiences-container .projects-track {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    overflow: visible;
+    transform: none;
+}
+
+/* Ensure both experiences are visible */
+.experience-card {
+    display: block !important;
+    position: relative !important;
+    transform: none !important;
+}
+
+@media (max-width: 768px) {
+    .experiences-container {
+        gap: 2rem;
+        padding: 0.5rem;
+    }
+}
