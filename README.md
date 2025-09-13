@@ -26,6 +26,15 @@ Visit the live portfolio: [https://yasouimo.github.io/Portfolio/](https://yasoui
 - Direct links to GitHub repositories and live demos
 - Responsive project cards with hover effects
 
+### 💼 Professional Experiences
+- **NEW**: Comprehensive internship and work experience showcase
+- Detailed company profiles with logos and descriptions
+- Interactive expandable cards for each experience
+- Technology stacks and key achievements for each role
+- Duration, role, and location information
+- Direct links to project repositories
+- Bilingual support (English/French) for international accessibility
+
 ### 🏆 Certifications
 - Professional certifications and achievements
 - Organized display of credentials
@@ -45,6 +54,12 @@ Visit the live portfolio: [https://yasouimo.github.io/Portfolio/](https://yasoui
 - Smooth scroll animations using AOS library
 - Hover effects and transitions
 - Dynamic content loading
+- Expandable experience cards with detailed information
+
+### 🌐 Multilingual Support
+- English and French language options
+- Dynamic content switching
+- Culturally appropriate translations
 
 ## 🛠️ Technologies Used
 
@@ -70,18 +85,28 @@ Personal Portfolio/
 ├── index.html              # Main homepage
 ├── Aboutme.html            # About section
 ├── projects.html           # Projects showcase
+├── internships.html        # Professional experiences (NEW)
 ├── Certifications.html     # Certifications page
 ├── Contact.html            # Contact information
 ├── navbar.html             # Navigation component
 ├── styles/                 # CSS stylesheets
+│   ├── style.css
+│   ├── navbar.css
+│   ├── projects.css
+│   ├── language-switcher.css
+│   └── ...
 ├── scripts/                # JavaScript files
 │   ├── Aboutme.js
 │   ├── certifications.js
 │   ├── Contact.js
-│   └── ...
+│   ├── projects.js
+│   ├── language-switcher.js
+│   └── script.js
 ├── images/                 # Image assets
 │   ├── background.png
 │   ├── photo.png
+│   ├── Radem_logo.png
+│   ├── declic_logo.jpg
 │   └── ...
 ├── resources/              # Documents and files
 │   ├── Cv_Bellmir_Yahya_AI_DataScience.pdf
@@ -95,7 +120,9 @@ Personal Portfolio/
 - **Color Scheme**: Carefully chosen colors for optimal readability
 - **Typography**: Professional font choices for enhanced readability
 - **Animations**: Subtle animations that enhance user experience
+- **Interactive Elements**: Expandable cards and smooth transitions
 - **Accessibility**: Designed with accessibility best practices in mind
+- **Multilingual Design**: Seamless language switching functionality
 
 ## 📱 Responsive Breakpoints
 
@@ -109,6 +136,13 @@ Personal Portfolio/
 - Sticky navigation bar with smooth scrolling
 - Mobile-friendly hamburger menu
 - Active section highlighting
+- Multi-language navigation support
+
+### Professional Experiences
+- **RADEM Internship**: Full-stack supervisor management system development
+- **Declic Internship**: LLM event recommender system with advanced AI techniques
+- Interactive company profiles with detailed project information
+- Technology stack visualization and achievement highlights
 
 ### Contact
 - Multiple contact methods
@@ -129,6 +163,15 @@ Personal Portfolio/
 - Minified CSS and JavaScript
 - Fast loading times
 - SEO-friendly structure
+- Lazy loading for enhanced performance
+
+## 🆕 Recent Updates
+
+- **Experiences Page**: Added comprehensive professional experience showcase
+- **Bilingual Support**: Full English/French language switching
+- **Interactive Design**: Expandable experience cards with detailed information
+- **Company Profiles**: Detailed information about internship companies
+- **Project Integration**: Direct links to GitHub repositories for each experience
 
 ## 📞 Contact Information
 
