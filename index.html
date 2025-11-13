@@ -7,10 +7,20 @@
   <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="styles/navbar.css">
   <link rel="stylesheet" href="styles/language-switcher.css">
+  <link rel="stylesheet" href="styles/theme-switcher.css">
   <!-- Add Font Awesome for social icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+  <!-- Theme Toggle -->
+  <div class="theme-toggle-wrapper">
+    <div class="theme-toggle">
+      <div class="theme-toggle-slider">
+        <i class="fas fa-sun"></i>
+      </div>
+    </div>
+  </div>
+  
   <!--Navbar-->
   <nav class="navbar">
     <a href="index.html" class="nav-brand">BY</a>
@@ -85,6 +95,7 @@
       <button id="lang-fr" class="lang-btn">FR</button>
     </div>
   </footer>
+  <script src="scripts/theme-switcher.js"></script>
   <script src="scripts/script.js"></script>
   <script src="scripts/language-switcher.js"></script>
 </body>

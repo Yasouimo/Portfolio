@@ -7,9 +7,19 @@
     <link rel="stylesheet" href="styles/navbar.css">
     <link rel="stylesheet" href="styles/Contact.css">
     <link rel="stylesheet" href="styles/language-switcher.css">
+    <link rel="stylesheet" href="styles/theme-switcher.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Theme Toggle -->
+    <div class="theme-toggle-wrapper">
+        <div class="theme-toggle">
+            <div class="theme-toggle-slider">
+                <i class="fas fa-sun"></i>
+            </div>
+        </div>
+    </div>
+    
     <!-- Navbar -->
     <nav class="navbar">
         <a href="index.html" class="nav-brand">BY</a>
@@ -88,6 +98,7 @@
     </footer>
 
     <!-- Load scripts at the end of the body -->
+    <script src="scripts/theme-switcher.js"></script>
     <script src="scripts/language-switcher.js"></script>
     <script src="scripts/Contact.js"></script>
 </body>

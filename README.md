@@ -55,11 +55,23 @@ Visit the live portfolio: [https://yasouimo.github.io/Portfolio/](https://yasoui
 - Hover effects and transitions
 - Dynamic content loading
 - Expandable experience cards with detailed information
+- **NEW**: Dark/Light theme toggle with smooth transitions
+- **NEW**: Persistent theme preference storage
+- **NEW**: Modern glassmorphism card designs
+- **NEW**: Multi-level shadow system for depth
 
 ### 🌐 Multilingual Support
 - English and French language options
 - Dynamic content switching
 - Culturally appropriate translations
+
+### 🌓 Theme System
+- **NEW**: Beautiful dark and light mode toggle
+- Smooth color transitions across all components
+- Persistent theme storage (remembers your preference)
+- Modern purple-blue gradient accent colors
+- Optimized for both accessibility and aesthetics
+- Automatic theme application across all pages
 
 ## 🛠️ Technologies Used
 

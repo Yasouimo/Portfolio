@@ -1,0 +1,145 @@
+/* Theme Switcher Styles */
+.theme-toggle-wrapper {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.theme-toggle {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.theme-toggle:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.theme-toggle-slider {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 24px;
+    height: 24px;
+    background: white;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.theme-toggle-slider i {
+    font-size: 12px;
+    color: #667eea;
+}
+
+.theme-toggle.dark .theme-toggle-slider {
+    transform: translateX(30px);
+}
+
+/* CSS Variables for Theme */
+:root {
+    /* Light Mode Colors */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8f9fa;
+    --bg-tertiary: #f1f3f5;
+    --bg-card: #ffffff;
+    --bg-card-hover: #f8f9fa;
+    
+    --text-primary: #1a1a1a;
+    --text-secondary: #4a5568;
+    --text-tertiary: #718096;
+    
+    --accent-primary: #667eea;
+    --accent-secondary: #764ba2;
+    --accent-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    
+    --border-color: #e2e8f0;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.12);
+    --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.15);
+    
+    --card-gradient: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+    --overlay: rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] {
+    /* Dark Mode Colors - GREEN ACCENT */
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #1a1a1a;
+    --bg-tertiary: #242424;
+    --bg-card: #1a1a1a;
+    --bg-card-hover: #252525;
+    
+    --text-primary: #ffffff;
+    --text-secondary: #e2e8f0;
+    --text-tertiary: #a0aec0;
+    
+    --accent-primary: #00ff9d;
+    --accent-secondary: #00cc7d;
+    --accent-gradient: linear-gradient(135deg, #00ff9d 0%, #00cc7d 100%);
+    
+    --border-color: #2d3748;
+    --shadow-sm: 0 2px 8px rgba(0, 255, 157, 0.15);
+    --shadow-md: 0 4px 16px rgba(0, 255, 157, 0.2);
+    --shadow-lg: 0 10px 40px rgba(0, 255, 157, 0.25);
+    --shadow-xl: 0 20px 60px rgba(0, 255, 157, 0.3);
+    
+    --card-gradient: linear-gradient(135deg, rgba(0, 255, 157, 0.05) 0%, rgba(0, 204, 125, 0.05) 100%);
+    --overlay: rgba(0, 0, 0, 0.7);
+}
+
+/* Smooth transitions for theme changes */
+body,
+.navbar,
+.hero-section,
+.project-card,
+.certification-card,
+.contact-card,
+.skill-item,
+.timeline-card,
+.company-section,
+.page-container {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Global Styles */
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+/* Responsive Design for Theme Toggle */
+@media (max-width: 768px) {
+    .theme-toggle-wrapper {
+        top: 15px;
+        right: 15px;
+    }
+    
+    .theme-toggle {
+        width: 50px;
+        height: 26px;
+    }
+    
+    .theme-toggle-slider {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .theme-toggle.dark .theme-toggle-slider {
+        transform: translateX(24px);
+    }
+}

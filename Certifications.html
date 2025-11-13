@@ -8,10 +8,19 @@
     <link rel="stylesheet" href="styles/navbar.css">
     <link rel="stylesheet" href="styles/certifications.css">
     <link rel="stylesheet" href="styles/language-switcher.css">
+    <link rel="stylesheet" href="styles/theme-switcher.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
+    <!-- Theme Toggle -->
+    <div class="theme-toggle-wrapper">
+        <div class="theme-toggle">
+            <div class="theme-toggle-slider">
+                <i class="fas fa-sun"></i>
+            </div>
+        </div>
+    </div>
     
     <!-- Navbar -->
     <nav class="navbar">
@@ -478,6 +487,102 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Deep Learning with PyTorch Certificate -->
+                <div class="certification-card" data-aos="fade-up">
+                    <div class="certification-header" onclick="toggleDetails(this)">
+                        <div class="certification-preview">
+                            <div class="certification-image-wrapper">
+                                <img src="images/photo20.jpg" alt="Deep Learning with PyTorch Certification" class="certification-image">
+                            </div>
+                            <div class="certification-intro">
+                                <h2 class="certification-title" data-en="Deep Learning with PyTorch" data-fr="Deep Learning avec PyTorch">Deep Learning with PyTorch</h2>
+                                <span class="certification-provider"><i class="fas fa-certificate"></i> DataCamp</span>
+                            </div>
+                        </div>
+                        <div class="toggle-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="certification-details">
+                        <div class="details-grid">
+                            <div class="details-section description">
+                                <h3 data-en="Description" data-fr="Description"><i class="fas fa-info-circle"></i> Description</h3>
+                                <p data-en="Comprehensive deep learning certification using PyTorch, covering neural networks, computer vision, natural language processing, and advanced deep learning architectures for real-world applications." data-fr="Certification complète en deep learning utilisant PyTorch, couvrant les réseaux de neurones, la vision par ordinateur, le traitement du langage naturel et les architectures avancées de deep learning pour des applications réelles.">Comprehensive deep learning certification using PyTorch, covering neural networks, computer vision, natural language processing, and advanced deep learning architectures for real-world applications.</p>
+                            </div>
+                            <div class="details-section contents">
+                                <h3 data-en="Course Contents" data-fr="Contenu du Cours"><i class="fas fa-list-ul"></i> Course Contents</h3>
+                                <ul>
+                                    <li data-en="PyTorch Fundamentals & Tensors" data-fr="Fondamentaux PyTorch & Tenseurs">PyTorch Fundamentals & Tensors</li>
+                                    <li data-en="Neural Networks & Backpropagation" data-fr="Réseaux de Neurones & Rétropropagation">Neural Networks & Backpropagation</li>
+                                    <li data-en="Convolutional Neural Networks (CNNs)" data-fr="Réseaux de Neurones Convolutifs (CNNs)">Convolutional Neural Networks (CNNs)</li>
+                                    <li data-en="Recurrent Neural Networks (RNNs)" data-fr="Réseaux de Neurones Récurrents (RNNs)">Recurrent Neural Networks (RNNs)</li>
+                                    <li data-en="Transfer Learning & Pre-trained Models" data-fr="Transfer Learning & Modèles Pré-entraînés">Transfer Learning & Pre-trained Models</li>
+                                    <li data-en="Model Optimization & Deployment" data-fr="Optimisation & Déploiement de Modèles">Model Optimization & Deployment</li>
+                                </ul>
+                            </div>
+                            <div class="details-section skills">
+                                <h3 data-en="Skills Gained" data-fr="Compétences Acquises"><i class="fas fa-tools"></i> Skills Gained</h3>
+                                <ul>
+                                    <li data-en="PyTorch Framework" data-fr="Framework PyTorch">PyTorch Framework</li>
+                                    <li data-en="Deep Learning" data-fr="Deep Learning">Deep Learning</li>
+                                    <li data-en="Computer Vision" data-fr="Vision par Ordinateur">Computer Vision</li>
+                                    <li data-en="Natural Language Processing" data-fr="Traitement du Langage Naturel">Natural Language Processing</li>
+                                    <li data-en="Neural Network Design" data-fr="Conception de Réseaux de Neurones">Neural Network Design</li>
+                                    <li data-en="Model Training & Tuning" data-fr="Entraînement & Ajustement de Modèles">Model Training & Tuning</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Engineer in Python Certificate -->
+                <div class="certification-card" data-aos="fade-up">
+                    <div class="certification-header" onclick="toggleDetails(this)">
+                        <div class="certification-preview">
+                            <div class="certification-image-wrapper">
+                                <img src="images/photo21.jpg" alt="Data Engineer in Python Certification" class="certification-image">
+                            </div>
+                            <div class="certification-intro">
+                                <h2 class="certification-title" data-en="Data Engineer in Python" data-fr="Ingénieur de Données en Python">Data Engineer in Python</h2>
+                                <span class="certification-provider"><i class="fas fa-certificate"></i> DataCamp</span>
+                            </div>
+                        </div>
+                        <div class="toggle-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="certification-details">
+                        <div class="details-grid">
+                            <div class="details-section description">
+                                <h3 data-en="Description" data-fr="Description"><i class="fas fa-info-circle"></i> Description</h3>
+                                <p data-en="Comprehensive 42-hour hands-on program focused on building robust and efficient data pipelines. This certification bridges the gap between data science and data engineering, ensuring cleaner and more reliable data for smarter insights." data-fr="Programme pratique complet de 42 heures axé sur la construction de pipelines de données robustes et efficaces. Cette certification comble le fossé entre la science des données et l'ingénierie des données, garantissant des données plus propres et plus fiables pour des insights plus intelligents.">Comprehensive 42-hour hands-on program focused on building robust and efficient data pipelines. This certification bridges the gap between data science and data engineering, ensuring cleaner and more reliable data for smarter insights.</p>
+                            </div>
+                            <div class="details-section contents">
+                                <h3 data-en="Course Contents" data-fr="Contenu du Cours"><i class="fas fa-list-ul"></i> Course Contents</h3>
+                                <ul>
+                                    <li data-en="ETL & ELT Workflows" data-fr="Workflows ETL & ELT">ETL & ELT Workflows</li>
+                                    <li data-en="Data Cleaning & Transformation" data-fr="Nettoyage & Transformation des Données">Data Cleaning & Transformation</li>
+                                    <li data-en="API Integration & Data Collection" data-fr="Intégration d'API & Collecte de Données">API Integration & Data Collection</li>
+                                    <li data-en="SQL for Data Engineering" data-fr="SQL pour l'Ingénierie des Données">SQL for Data Engineering</li>
+                                    <li data-en="Apache Airflow Automation" data-fr="Automatisation avec Apache Airflow">Apache Airflow Automation</li>
+                                    <li data-en="Git Version Control" data-fr="Contrôle de Version avec Git">Git Version Control</li>
+                                </ul>
+                            </div>
+                            <div class="details-section skills">
+                                <h3 data-en="Skills Gained" data-fr="Compétences Acquises"><i class="fas fa-tools"></i> Skills Gained</h3>
+                                <ul>
+                                    <li data-en="Python Programming" data-fr="Programmation Python">Python Programming</li>
+                                    <li data-en="ETL & ELT" data-fr="ETL & ELT">ETL & ELT</li>
+                                    <li data-en="Data Pipeline Design" data-fr="Conception de Pipelines de Données">Data Pipeline Design</li>
+                                    <li data-en="Apache Airflow" data-fr="Apache Airflow">Apache Airflow</li>
+                                    <li data-en="SQL & Databases" data-fr="SQL & Bases de Données">SQL & Databases</li>
+                                    <li data-en="API Integration" data-fr="Intégration d'API">API Integration</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -504,6 +609,7 @@
             once: true
         });
     </script>
+    <script src="scripts/theme-switcher.js"></script>
     <script src="scripts/certifications.js"></script>
     <script src="scripts/script.js"></script>
     <script src="scripts/language-switcher.js"></script>
