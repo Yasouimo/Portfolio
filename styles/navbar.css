@@ -114,11 +114,14 @@
     justify-content: flex-start;
     align-items: center;
     gap: 1.5rem;
-    background: rgba(10, 10, 10, 0.98);
+    background: var(--bg-card);
+    backdrop-filter: blur(20px);
     padding: 2rem;
     transform: translateY(-150%);
     transition: transform 0.4s ease-in-out;
     overflow-y: auto;
+    border-top: 1px solid var(--border-color);
+    box-shadow: var(--shadow-lg);
   }
 
   .nav-links.active {
