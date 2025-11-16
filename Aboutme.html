@@ -5,6 +5,13 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Me - Bellmir Yahya</title>
+    <script>
+      // Apply theme immediately to prevent flash
+      (function() {
+        const theme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', theme);
+      })();
+    </script>
     <link rel="stylesheet" href="styles/navbar.css">
     <link rel="stylesheet" href="styles/Aboutme.css">
     <link rel="stylesheet" href="styles/language-switcher.css">

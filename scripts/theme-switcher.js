@@ -42,7 +42,8 @@
     // Initialize theme on page load
     const initTheme = () => {
         const savedTheme = getTheme();
-        setTheme(savedTheme);
+        // Update toggle button appearance immediately (theme already applied via inline script)
+        updateToggleButton(savedTheme);
         
         // Add click event listener to toggle
         const toggle = document.querySelector('.theme-toggle');
@@ -51,7 +52,16 @@
         }
     };
     
-    // Run on DOM content loaded
+    // Apply toggle button state immediately when script loads
+    const quickInit = () => {
+        const savedTheme = getTheme();
+        updateToggleButton(savedTheme);
+    };
+    
+    // Run quick init immediately
+    quickInit();
+    
+    // Run full init on DOM content loaded
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', initTheme);
     } else {
