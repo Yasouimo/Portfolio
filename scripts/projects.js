@@ -148,3 +148,19 @@ document.addEventListener('click', (e) => {
         closeAllDetails();
     }
 });
+
+// Keyboard navigation with arrow keys
+document.addEventListener('keydown', (e) => {
+    // Only trigger if not typing in an input field
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
+        return;
+    }
+    
+    if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        scrollToPrevProject();
+    } else if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        scrollToNextProject();
+    }
+});

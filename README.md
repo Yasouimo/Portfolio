@@ -59,6 +59,7 @@ Visit the live portfolio: [https://yasouimo.github.io/Portfolio/](https://yasoui
 - **NEW**: Persistent theme preference storage
 - **NEW**: Modern glassmorphism card designs
 - **NEW**: Multi-level shadow system for depth
+- **NEW**: Keyboard navigation support (Arrow keys to navigate projects/certifications)
 
 ### 🌐 Multilingual Support
 - English and French language options
@@ -179,6 +180,7 @@ Personal Portfolio/
 
 ## 🆕 Recent Updates
 
+- **Keyboard Navigation**: Added left/right arrow key support for navigating projects and certifications
 - **Experiences Page**: Added comprehensive professional experience showcase
 - **Bilingual Support**: Full English/French language switching
 - **Interactive Design**: Expandable experience cards with detailed information

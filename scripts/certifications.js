@@ -133,3 +133,23 @@ document.addEventListener('click', (e) => {
         closeAllDetails();
     }
 });
+
+// Keyboard navigation with arrow keys
+document.addEventListener('keydown', (e) => {
+    // Only trigger if not typing in an input field
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
+        return;
+    }
+    
+    if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        const currentIndex = getCurrentIndex();
+        const prevIndex = currentIndex - 1;
+        scrollToCertificate(prevIndex);
+    } else if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        const currentIndex = getCurrentIndex();
+        const nextIndex = currentIndex + 1;
+        scrollToCertificate(nextIndex);
+    }
+});
