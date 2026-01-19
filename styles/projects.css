@@ -601,6 +601,8 @@
 .github-section {
     margin-top: 25px;
     text-align: center;
+    position: relative;
+    z-index: 10;
 }
 
 .github-section .github-link {
@@ -750,6 +752,8 @@
 .github-section {
     margin-top: 25px;
     text-align: center;
+    position: relative;
+    z-index: 10;
 }
 
 .github-section .github-link {
@@ -810,4 +814,31 @@
         gap: 2rem;
         padding: 0.5rem;
     }
+}
+
+/* Override tech-badge styles for theme support */
+.tech-badge {
+    background: var(--accent-gradient) !important;
+    box-shadow: 0 4px 10px rgba(102, 126, 234, 0.3) !important;
+}
+
+[data-theme="dark"] .tech-badge {
+    box-shadow: 0 4px 10px rgba(0, 255, 157, 0.3) !important;
+}
+
+.tech-badge:hover {
+    transform: translateY(-2px) scale(1.05) !important;
+    box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4) !important;
+}
+
+[data-theme="dark"] .tech-badge:hover {
+    box-shadow: 0 6px 16px rgba(0, 255, 157, 0.4) !important;
+}
+
+/* Fix icon colors */
+.internship-duration i,
+.internship-role i,
+.location i,
+.achievements li::marker {
+    color: var(--accent-primary) !important;
 }
