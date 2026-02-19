@@ -15,7 +15,7 @@ body {
   justify-content: space-between;
   align-items: center;
   min-height: 90vh;
-  padding: 0 10%;
+  padding: calc(var(--navbar-height) + 1rem) 10% 2rem;
   position: relative;
   overflow: hidden;
 }
@@ -245,7 +245,7 @@ h2 span {
   .hero-section {
       flex-direction: column;
       text-align: center;
-      padding: 120px 5% 40px;
+      padding: calc(var(--navbar-height) + 1.5rem) 5% 40px;
       gap: 40px;
   }
 
@@ -289,7 +289,7 @@ h2 span {
 
 @media (max-width: 768px) {
   .hero-section {
-      padding: 100px 20px 40px;
+      padding: calc(var(--navbar-height) + 1.25rem) 20px 40px;
   }
 
   .buttons {
@@ -329,7 +329,7 @@ h2 span {
 
 @media (max-width: 480px) {
   .hero-section {
-      padding: 80px 15px 30px;
+      padding: calc(var(--navbar-height) + 0.75rem) 15px 30px;
   }
 
   h1 {

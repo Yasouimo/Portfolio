@@ -1,4 +1,9 @@
 /* Navbar styles */
+:root {
+  --navbar-height: 88px;
+  --navbar-height-mobile: 70px;
+}
+
 .navbar {
   position: fixed;
   top: 0;
@@ -96,6 +101,10 @@
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+  :root {
+    --navbar-height: var(--navbar-height-mobile);
+  }
+
   .navbar {
     padding: 1rem 5%;
   }

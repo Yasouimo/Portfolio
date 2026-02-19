@@ -18,8 +18,8 @@ body {
 }
 
 .contact-container {
-    min-height: calc(100vh - 70px);
-    margin-top: 70px;
+    min-height: calc(100vh - var(--navbar-height));
+    margin-top: var(--navbar-height);
     padding: 4rem 2rem;
     position: relative;
     overflow: hidden;
