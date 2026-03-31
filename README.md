@@ -2,7 +2,8 @@
  
 A modern, responsive personal portfolio website showcasing my skills, projects, certifications, and professional experience. Built with clean design principles and smooth animations to provide an engaging user experience.
 
-<img width="1919" height="1079" alt="Capture d&#39;écran 2026-02-19 143539" src="https://github.com/user-attachments/assets/9cd07fae-740b-4ba1-83c1-0447dc890f39" />
+<img width="1893" height="1079" alt="Capture d&#39;écran 2026-02-19 143737" src="https://github.com/user-attachments/assets/9ddbb16f-2b91-4740-aa82-ed516befdb79" />
+
 
 
 ## 🚀 Live Demo
