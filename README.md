@@ -194,7 +194,6 @@ Personal Portfolio/
 **Bellmir Yahya**
 - **GitHub**: [Yasouimo](https://github.com/Yasouimo)
 - **LinkedIn**: [Yahya Bellmir](https://www.linkedin.com/in/yahya-bellmir-a54176284/)
-- **Email**: yahyabellmir@gmail.com
 
 ---
 
