@@ -172,13 +172,6 @@ Personal Portfolio/
 - Edge (latest)
 - Mobile browsers
 
-## 📈 Performance Features
-
-- Optimized images and assets
-- Minified CSS and JavaScript
-- Fast loading times
-- SEO-friendly structure
-- Lazy loading for enhanced performance
 
 ## 🆕 Recent Updates
 
